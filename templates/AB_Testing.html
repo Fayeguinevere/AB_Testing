@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>A/B Testing Benchmark</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <div class="grootvlak">
+    AFAS Software
+  </div>
+
+
+<div style="display: flex; align-items: center;">
+  <img src="{{ url_for('static', filename='images/165_benefits_AB_testing_illustration_blog.png') }}" alt="Foto" class="grotefoto">
+
+  <div>
+    <div class="tekstab">A/B Testing Benchmark</div>
+    <div class="introtekst">
+        Hi allemaal! <br>
+        Voor mijn afstudeerscriptie werk ik aan het ontwerpen van een benchmark waarmee snel kan worden bepaald of er een beter model bestaat dan het model dat momenteel wordt gebruikt.
+        Om dit te onderzoeken, voer ik A/B-testen uit met verschillende modellen.
+
+        Bij A/B-testing worden twee opties (A en B) met elkaar vergeleken, waarbij de taak is om te beoordelen welke van de twee beter presteert.
+        In deze opdracht ontvangen jullie een klantvraag (met onderwerp en toelichting) en daarbij twee gegenereerde antwoorden van verschillende modellen.<br>
+        De vraag is vervolgens: welk van deze twee is het beste beginantwoord?  
+
+    </div>
+  </div>
+</div>
+<div class="grijsvlakab"> 
+  <div class="grijsvlaktekst">
+    Alvast heel erg bedankt voor jullie tijd en moeite! <br>
+<a href="{{ url_for('incident', nummer=1) }}" class="knop">Let's go!</a>
+  </div>
+</div>
+
+</body>
+</html>

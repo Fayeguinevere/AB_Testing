@@ -1,0 +1,249 @@
+ body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .grootvlak {
+      width: 100%;
+      height: 150px;
+      background-color: #005FAA;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 55px;
+      font-weight: 700; /* dikgedrukte variant van Roboto */
+    }
+    .vlak {
+      width: 100%;
+      height: 50px;
+      background-color: #005FAA;
+      display: flex;
+    }
+
+    .vlak2 {
+      width: 100%;
+      height: 50px;
+      background-color: #005FAA;
+      display: flex;
+      margin-bottom: 100px;
+    }
+    
+    .grijsvlak {
+      position: relative;
+      width: 100%;
+      background-color: #f9f9f9;
+      font-family: 'Roboto', sans-serif;
+      display: flex;
+      box-sizing: border-box;
+    }
+
+    .grijsvlakab {
+      width: 100%;
+      height: 270px;
+      margin-top: 140px;
+      background-color: #f9f9f9;
+      align-items: center;
+      padding-top: 50px;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .grijsvlaktekst{
+      font-size: 33px;
+      padding-right: 180px;
+      font-weight: 700;
+      font-family:  'Roboto', sans-serif;
+      color: orange;
+      line-height: 1.6;
+      align-items: center;
+      margin-left: 370px;
+      margin-top: 50px;
+    }
+
+    .grotefoto{
+      width: 600px;
+      height: 400px;
+      margin-top: 100px;
+      display: block;
+      margin-left: 0px;
+      border-color: orange;
+      border-style: solid;
+      border-width: 2px;
+      margin-right: 90px;
+    }
+
+    .eindfoto{
+      width: 800px;
+      height: 500px;
+      margin-top: 100px;
+      display: flex;
+      margin-left: 0px;
+      align-items: center;
+    }
+
+    .vraag {
+      font-weight: 400;
+      margin-bottom: 2em;
+    }
+
+    .vraag .label {
+      font-weight: 700;
+    }
+
+    .titel {
+      font-size: 36px;
+      font-weight: 700;
+      color: #005FAA;
+      text-align: center;
+      margin: 40px 0 20px 0;
+      padding-bottom: 70px;
+    }
+
+    .tekstab{
+        font-size: 50px;
+        margin-right: 20px;
+        font-weight: 700;
+        font-family:  'Roboto', sans-serif;
+        color: #005FAA;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        margin-top: 100px
+    }
+
+    .tekst {
+      font-size: 18px;
+      font-weight: 700;
+      color: #005FAA;
+      line-height: 1.6;
+      margin: 20px;
+      text-align: left;
+    }
+
+    .tekst1 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #005FAA;
+      line-height: 1.6;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .introtekst {
+      font-size: 18px;
+      padding-right: 40px;
+      font-weight: 700;
+      font-family:  'Roboto', sans-serif;
+      color: #005FAA;
+      line-height: 1.6;
+    }
+
+    .blauwe-streep {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background-color: orange;
+      transform: translateX(-50%);
+    }
+
+    .linkerkant,
+    .rechterkant {
+      width: 45%;
+      text-align: left;
+      font-size: 15px;
+      font-weight: 400;
+      color: #005FAA;
+      line-height: 1.6;
+      margin: 20px;
+    }
+
+    .rechterkant {
+      text-align: justify;
+      padding-left: 60px;
+    }
+
+    .knop {
+      background-color: #f9f9f9;
+      border-color: orange;
+      border-style: solid;
+      border-width: 2px;
+      color: orange;
+      text-decoration: none;
+      padding: 16px 40px;
+      font-size: 16px;
+      border-radius: 8px;
+      display: inline-block;
+      font-family: 'Roboto', sans-serif;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .knop:hover {
+      background-color: #005FAA;
+      color: white;
+    }
+
+    .foto {
+      width: 80px;
+      height: 80px;
+    }
+
+    
+    .knop2 {
+        background-color: #f9f9f9; /* AFAS-blauw */
+        border-color: orange;
+        border-style: solid;
+        border-width: 2px;
+        color: orange;
+        text-decoration: none;     /* haalt de onderstreping weg */
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 8px;        /* afgeronde hoeken */
+        display: inline-block;     /* maakt de knop rechthoekig */
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+        transition: background-color 0.3s; /* mooie hoverovergang */
+        margin-top: 25px;
+        text-align: center;
+}
+
+
+    .knop1 {
+        background-color: #f9f9f9; /* AFAS-blauw */
+        border-color: orange;
+        border-style: solid;
+        border-width: 2px;
+        color: orange;
+        text-decoration: none;     /* haalt de onderstreping weg */
+        padding: 12px 24px;
+        font-size: 16px;
+        border-radius: 8px;        /* afgeronde hoeken */
+        display: inline-block;     /* maakt de knop rechthoekig */
+        font-family: 'Roboto', sans-serif;
+        cursor: pointer;
+        transition: background-color 0.3s; /* mooie hoverovergang */
+        margin-top: 25px;
+}
+
+.knop1, .knop2, .knop1:hover, .knop2:hover {
+  background-color: #005FAA; /* iets donkerder blauw bij hover */
+}
+
+.optie-tekst ul {
+  margin-left: 20px;
+  list-style-type: disc;
+}
+
+.optie-tekst p {
+  margin-bottom: 8px;
+}
+
+.optie-tekst h3 {
+  margin-top: 12px;
+  color: #005FAA;
+}

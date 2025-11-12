@@ -7,6 +7,16 @@ from markupsafe import Markup
 
 app = Flask(__name__)
 
+# global state
+vragen_global = []
+
+# Dataset maar één keer laden
+@app.before_first_request
+def laad_vragen():
+    global vragen_global
+    vragen_global = lees_vragen()
+
+
 # Intro pagina
 @app.route("/")
 def home():
@@ -16,10 +26,10 @@ def home():
 # Incident pagina
 @app.route("/incident/<int:nummer>")
 def incident(nummer):
-    """Toon een willekeurig incident met Markdown-opmaak."""
-    vragen = lees_vragen()
-    random.seed(nummer)
-    geselecteerde = maak_random_vraag(vragen)
+    global vragen_global
+    if not vragen_global:
+        return render_template("bedankt.html")
+    geselecteerde = maak_random_vraag(vragen_global)
     return render_template("incident.html", vragen=[geselecteerde], nummer=nummer)
 
 # Bedankpagina
@@ -29,7 +39,6 @@ def bedankt():
 
 # CSV lezen
 def lees_vragen():
-    """Lees alle rijen uit het CSV-bestand."""
     alle_rijen = []
     with open("AB_dataset_nieuw.csv", newline="", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
@@ -59,10 +68,10 @@ def maak_random_vraag(vragen):
     return geselecteerde
 
 # Resultaat opslaan
-# Resultaat opslaan
 @app.route("/opslaan/<int:nummer>", methods=["POST"])
 def opslaan_incident(nummer):
     """Sla resultaat op, verwijder de gebruikte vraag, en ga door naar het volgende incident."""
+    global vragen_global
     index = request.form.get("index")
     onderwerp = request.form.get("onderwerp")
     toelichting = request.form.get("toelichting")
@@ -72,7 +81,6 @@ def opslaan_incident(nummer):
     optie1_model = request.form.get("optie1_model")
     optie2_model = request.form.get("optie2_model")
 
-    # --- 1️⃣ Resultaat opslaan in resultaten.csv ---
     csv_bestand = "resultaten.csv"
     bestand_bestaat = os.path.exists(csv_bestand)
 
@@ -88,23 +96,18 @@ def opslaan_incident(nummer):
             optie1_model, optie2_model, keuze
         ])
 
-    # --- 2️⃣ Verwijder de gebruikte vraag uit AB_dataset_nieuw.csv ---
     try:
-        alle_vragen = lees_vragen()
-        # Filter alle vragen behalve degene met het gekozen indexnummer
-        nieuwe_vragen = [v for v in alle_vragen if v["Index"] != index]
-
-        # Alleen herschrijven als er iets is verwijderd
-        if len(nieuwe_vragen) < len(alle_vragen):
-            with open("AB_dataset_nieuw.csv", "w", newline="", encoding="utf-8") as csvfile:
-                fieldnames = alle_vragen[0].keys()
+        nieuwe_vragen = [v for v in vragen_global if v["Index"] != index]
+        vragen_global = nieuwe_vragen
+        with open("AB_dataset_nieuw.csv", "w", newline="", encoding="utf-8") as csvfile:
+                fieldnames = vragen_global[0].keys() if vragen_global else []
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                writer.writeheader()
-                writer.writerows(nieuwe_vragen)
+                if fieldnames:
+                    writer.writeheader()
+                    writer.writerows(vragen_global)
     except Exception as e:
-        print(f"⚠️ Fout bij verwijderen van vraag {index}: {e}")
+        print(f"Fout bij verwijderen van vraag {index}: {e}")
 
-    # --- 3️⃣ Naar volgende incident of bedankt ---
     volgend_incident = nummer + 1
     if volgend_incident <= 5:
         return redirect(url_for("incident", nummer=volgend_incident))

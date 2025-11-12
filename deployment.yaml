@@ -18,10 +18,13 @@ spec:
       imagePullSecrets:
         - name: acr-afas-secret
       containers:
-        - name: ab-testing-app
+        - name: ab-testing
           image: afassoftware.azurecr.io/ab-testing-ai:latest
           ports:
             - containerPort: 5000
+          env:
+            - name: PORT
+              value: "5000"
 ---
 apiVersion: v1
 kind: Service

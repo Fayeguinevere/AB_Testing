@@ -19,9 +19,7 @@ def home():
 # Bedankpagina
 @app.route("/bedankt")
 def bedankt():
-    return render_template("bedankt.html")
-
-# Incident ERP pagina
+    return render_template("bedankt.html")# Incident ERP pagina
 @app.route("/incident_erp/<int:nummer>")
 def incident_erp(nummer):
     global vragen_erp
@@ -166,6 +164,7 @@ def opslaan_hrm(nummer):
         return redirect(url_for("incident_hrm", nummer=volgend_incident))
     else:
         return redirect(url_for("bedankt"))
+
 
 
 if __name__ == "__main__":

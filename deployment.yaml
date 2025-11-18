@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ab-testing-app
+  namespace: ai-team
+  labels:
+    app: ab-testing-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ab-testing-app
+  template:
+    metadata:
+      labels:
+        app: ab-testing-app
+    spec:
+      imagePullSecrets:
+        - name: acr-pull-secret
+      containers:
+        - name: ab-testing-app
+          image: afassoftware.azurecr.io/ab-testing-ai:latest
+          ports:
+            - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ab-testing-app
+  namespace: ai-team
+  labels:
+    app: ab-testing-app
+spec:
+  ports:
+    - port: 5000
+      targetPort: 5000
+  selector:
+    app: ab-testing-app
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ab-testing-app
+  namespace: ai-team
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: ab-testing-app.dev.k8s.ad.afas.nl
+      http:
+        paths:
+          - backend:
+              service:
+                name: ab-testing-app
+                port:
+                  number: 5000
+            path: /
+            pathType: Prefix

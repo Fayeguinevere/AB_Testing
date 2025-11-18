@@ -6163,3 +6163,80 @@ Samenvatting
 • Geautomatiseerd/periodiek? Exporteer via REST/OData en gebruik een MAX(LogonDateTime) per user.
 
 Kies de methode die het beste aansluit op je gewenste frequentie en de tooling waar je al mee werkt.",GPT-5,GPT-o3,Optie A
+253,1,[RABO] Fout bij verzenden: specifieke handeling mislukt zonder wijzigingen in software of omgeving.,Probleembeschrijving: fout bij verzenden Aanvullende details: - Kun je aangeven bij welke specifieke handeling deze foutmelding verschijnt? - verzenden - Wanneer is dit probleem begonnen op te treden? - 2 manden minimaal - Is er iets veranderd in de software of omgeving sinds het moment dat het werkte? - nee,"Bedankt voor de aanvullende informatie. Met de gegevens die u heeft doorgegeven (“fout bij verzenden”, probleem bestaat ≥ 2 maanden, er is niets gewijzigd in software of omgeving) stel ik de volgende stappen voor om de oorzaak verder te achterhalen:
+
+1. Exacte foutmelding en logbestanden  
+   • Noteer (of maak een screenshot van) de precieze fout­­­tekst, foutcode of referentie­nummer dat vlak na het klikken op “Verzenden” verschijnt.  
+   • Indien beschikbaar: stuur een uittreksel van het (fout)logboek of de systeemlog van het moment dat u op “Verzenden” klikt.  
+   • Meld ook of er nog sub­processen of pop-ups starten en direct weer sluiten.
+
+2. Reproduceerbare test  
+   • Kunt u een zo klein mogelijk testscenario beschrijven (eventueel met voorbeeld­data) waarmee het probleem elke keer optreedt?  
+   • Werkt het verzenden wel als u precies dezelfde procedure in een andere (test)omgeving uitvoert?
+
+3. Versienummer, besturingssysteem en rechten  
+   • Controleer het exacte versienummer van de software / module. Soms is er ongemerkt een patch of auto-update geweest.  
+   • Noteer het besturings­systeem, browser (indien web­applicatie), en of u als beheerder of als reguliere gebruiker werkt.
+
+4. Lokale factoren uitsluiten  
+   • Test op een andere werk­station / laptop binnen hetzelfde netwerk.  
+   • Test in een ander netwerk (bijv. via mobiele hotspot) om een lokaal firewall- of proxy­probleem uit te sluiten.  
+   • Schakel tijdelijk antivirus of endpoint-security uit (indien toegestaan) en probeer opnieuw te verzenden.
+
+5. Cache- en sessieproblemen  
+   • Browser­cache legen of in incognito/private-modus inloggen.  
+   • Indien het een thick-client is: verwijder eventuele tijdelijke bestanden of reset het user-profiel.
+
+6. Vergelijk met een collega-account  
+   • Laat een collega met een eigen account exact dezelfde handeling doen. Treedt de fout daar ook op, of alleen bij uw account?
+
+7. Server- of API-status  
+   • Vraag intern na of er recente wijzigingen zijn op serverniveau (updates, SSL-certificaatvervanging, firewall-regels, load-balancer).  
+   • Bekijk of er time-outs of 4xx/5xx-responses in de serverlogs staan op het moment van verzenden.
+
+Volgende stap
+• Als u bovenstaande punten kunt aanleveren (vooral foutcode / logfragementen + testscenario), kunnen we gerichter analyseren of het om een rechten­conflict, netwerk­blokkade of een server­issue gaat.  
+• Mocht u geen logging kunnen achterhalen, laat dan in ieder geval weten: datum/tijdstip van de laatste mislukte poging, zodat we in de serverlogs kunnen zoeken.
+
+Laat me weten wat u kunt verzamelen, dan pakken we het direct op. Mocht iets onduidelijk zijn, geef het gerust aan.","Dank voor je melding. Ik begrijp dat je bij de handeling “verzenden” al minimaal 2 maanden een fout krijgt, zonder dat er wijzigingen zijn geweest in software of omgeving. Om dit gericht op te lossen heb ik een paar gerichte vragen en checks, plus mogelijke oorzaken en vervolgstappen.
+
+Aanvullende vragen (zo concreet mogelijk):
+- Welke oplossing/product en module gebruik je precies bij “verzenden” (bijv. betaalbestand via Rabo, SFTP-upload, API-koppeling, boekhoudkoppeling)?
+- Wat is de volledige, exacte foutmelding (inclusief eventuele code/ID) en op welk scherm verschijnt die?
+- Treedt de fout op bij alle verzendpogingen of alleen bij specifieke bestanden/boekingen/klanten?
+- Werkt “opslaan” of “valideren” wel, en faalt alleen het daadwerkelijke versturen?
+- Op welke datum/tijd (met tijdzone) trad de fout het laatst op? Gebeurt het direct of na een wachttijd?
+- Is er een ander account/gebruiker of apparaat waarbij het wél lukt (of faalt het overal)?
+- Wat wordt er precies verzonden (bijv. PAIN.001 betaalbestand, SEPA incasso, facturen), en hoe groot is het bestand/batch?
+- Gebruik je een proxy/VPN/firewall of IP-whitelisting richting Rabo (of SFTP/API) die van invloed kan zijn?
+
+Snelle checks die je direct kunt proberen:
+- Probeer dezelfde verzendactie vanaf een ander apparaat en netwerk (bijv. 4G hotspot) om netwerk-/firewallissues uit te sluiten.
+- Controleer of je systeemklok/NTP correct staat (een afwijkende tijd kan certificaat- of tokenfouten geven).
+- Log uit en opnieuw in; indien van toepassing, vernieuw autorisaties/tokens voor de Rabo-koppeling.
+- Als het om een browser gaat: leeg cache/cookies, test in een andere browser, en controleer of er extensies (adblock/VPN) actief zijn.
+- Controleer de Rabobank status/onderhoud (is er recent verstoring geweest?) en eventuele nieuwe beveiligingseisen (bijv. TLS/certificaten).
+- Test met een heel kleine batch of één transactieregel om payload-gerelateerde validatiefouten uit te sluiten.
+
+Als het een SFTP- of API-koppeling naar Rabo betreft:
+- SFTP: kun je nog verbinden met de host/poort (time-out, handshake, key mismatch)? Is jouw IP nog geautoriseerd en is het server host key/certificaat recent gewijzigd?
+- API: noteer de HTTP-statuscode, response body en eventuele correlation/trace ID. Zijn de OAuth-tokens geldig en hebben ze de juiste scopes? Is er recent een endpoint of versie gewijzigd?
+
+Logs en voorbeelden die ons helpen om te analyseren:
+- Exacte fouttekst/code en een screenshot.
+- Datum/tijd van de mislukte poging, gebruikersnaam/tenant, en de referentie (bestandsnaam, batch-ID).
+- Indien beschikbaar: applicatielog (op “debug”/“verbose”) rond het moment van verzenden, en netwerklog (bijv. fout bij TLS/handshake of 4xx/5xx response).
+- Een voorbeeldbestand (geanonimiseerd) dat niet te verzenden is.
+
+Mogelijke oorzaken ondanks “geen wijzigingen” bij jullie:
+- Stilzwijgende omgevingseffecten (OS/CA-store update, firewall/proxy policy, certificaatvernieuwing).
+- Wijziging aan bankzijde (TLS/cipher suite, certificaatketen, endpoint policy, strengere bestandsvalidatie).
+- Expirede of ingetrokken autorisaties/tokens, of IP-whitelisting die is verlopen.
+- Data-/schema-afwijking in specifieke batches (karakterset, veldlengte, IBAN/BIC, uitvoerdatum buiten cutoff).
+
+Volgende stappen:
+- Deel aub de gevraagde gegevens (fouttekst/code, tijdstip, type verzending, logs). Met die info kunnen we gericht reproduceren en analyseren.
+- Indien dringend: we kunnen een test met jouw voorbeeldbestand uitvoeren in onze testomgeving en/of een korte remote sessie inplannen om live mee te kijken.
+- Als het naar Rabobank doorgezet moet worden: met correlation ID en tijdstempel kunnen we het sneller bij hun support laten traceren.
+
+Zodra we bovenstaande informatie hebben, pakken we dit verder op en komen we met een concrete oplossing of workaround.",GPT-o3,GPT-5,Optie B

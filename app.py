@@ -19,8 +19,8 @@ def home():
 @app.route("/incident/<int:nummer>")
 def incident(nummer):
     global vragen_global
-#    if not vragen_global:
-#        return render_template("bedankt.html")
+    if not vragen_global:           # Probleem zit hier
+        vragen_global = lees_vragen()
     geselecteerde = maak_random_vraag(vragen_global)
     return render_template("incident.html", vragen=[geselecteerde], nummer=nummer)
 

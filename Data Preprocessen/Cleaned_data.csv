@@ -1,0 +1,626 @@
+Onderwerp,Kenmerk
+Gegevens over ongemaximeerd cumulatief pensioengevend jaarinkomen vinden in AFAS Profit.,HRM
+[SSO I Tegel I URL I InSite} Testomgevingen van BNNVARA en OMROEP ZWART starten niet op.,Algemeen
+Licentie aanvraag lukt niet,Algemeen
+UPA-aanlevering voor Loyalis toont geen statusveld en geeft foutmelding bij pensioenaangifte.,HRM
+"[Btw-aangifte | communicatieprofiel] Versturen btw-aangifte via Taartenwinkel.nl mislukt, communicatielog blijft leeg. bericht staat op Communicatie met digipoort, maar moet CIS zijn",ERP
+[Blokkade] Knop voor aanmaken BTW-aangifte in administratie 2 reageert niet.,ERP
+"[autonummering] Autonummering projecten reageert niet op 'Startwaarde': ""Geen nummer beschikbaar (volgens instellingen) tijdens autonummering.""",Algemeen
+[Connector KnSalesRelationOrg] Foutmelding door onjuiste postcode-indeling bij buitenlandse klanten met Nederlands btw-nummer.,ERP
+"[Rapport] Aanmaning voor debiteur printen of mailen, geen printbestand verzonden aan printer. (AntaObject) The foreignkey does not exist in the database. FieldId=Definitiegroep, ForeignkeyId=KnMdA",ERP
+[rapport I veld] Lege pagina's met alleen een datum in het verleden bij aanmaningen in Afas.,ERP
+"[Onboarden / Woonplaats] Foutmelding bij onboarding: ""Voor land 'D' is de woonplaats 'Elten' niet bekend.""",HRM
+"[OHW methode] WIP-methode wijzigen voor projecten met geboekte facturen, foutmelding: journals op verkeerde GL.",ERP
+[Inkoopfactuur | Workflow] Facturen voor administratie 8 komen niet in de workflow bij kloppende verplichting.,ERP
+Zoeken en verwijderen van AFAS ERP Flex gebruikers lukt niet.,Algemeen
+[Journaalpost] Grootboekrekening Te betalen loonheffing komt niet overeen met wat er daadwerkelijk afgedragen wordt in de loonaangifte,HRM
+[Debiteur] Foutmelding bij aanpassen / wijzigen verantwoordelijke verkooprelatie: 'Gekozen voorkeur contact is geblokkeerd'.,Algemeen
+[Wens] Afwijkende medewerkerscode kan niet aangepast worden via beoordelingspagina bij Onboarden,HRM
+[Analyse] Analyse met een overzicht reserveringen vakantietoeslag,HRM
+"[Factuurnummers] Gaten in inkoopfactuurnummering / Ontbrekende inkoopfactuurnummers KF250006226, KF25000632 en KF250006258",ERP
+"[verzamelfactuur] Automatisch factureren in administratie 7 genereert geen factuur, geen journalisering.",ERP
+"[e-factuur] Factuur is via e-factuur ingeboekt, maar niet zichtbaar voor betaling.",ERP
+Import itemcode inkooprelatie,ERP
+Monitoren op contractverlenging workflow die te lang open staat,ERP
+Zoekweergave artikelen bij inkoopaanvraag,ERP
+Artikelgroepen onderhouden OCI-profiel,ERP
+Rapport inkooporder - itemcode inkooprelatie toevoegen,ERP
+[Loonaangifte] xml bestand loonaangifte,HRM
+[Belafspraak 15-04 15:00] Afleveradres wordt niet automatisch overgenomen uit voorcalculatie bij bestelvoorstel.,ERP
+[Muis klikt niet juist/ op de verkeerde plek in Profit. Hoe kan dit?] Muis reageert onnauwkeurig bij gebruik van 3 schermen met Profit.,Algemeen
+"[Facturen | verzonden mail | mailserver] Facturen zijn niet ontvangen door klant sinds 2025, controleer mailserver.",ERP
+"[Pocket | inloggen mislukt] AFAS-app werkt niet na iPhone-update; inloggen mislukt, ga naar instellingen.",Algemeen
+[Veld werking | witregel | API koppeling] Witruimte tussen regels in het toelichtingsveld bij dossierinvoer via API.,Algemeen
+[Pocket] Dossieritemactieknoppen 'Delen' en 'QR-code' niet goed leesbaar bij veel kleuren in huisstijl,Algemeen
+Verschil tussen berekende gedeelte salarisverwerking en loonaangifte in Aansluiting financieel,ERP
+[Nacalculatie] Verlofsoorten inrichten (verlof naar nacalculatie),HRM
+[Workflow] Delegeren en terughalen van inkoopfacturen,ERP
+"[Transitorische post] Transitorische verdeling selecteert tussenrekening op basis van bedrag, niet grootboekrekening.",ERP
+[Roosterwijziging][Workflow] Geen actieknoppen beschikbaar,HRM
+"[Projectboeking / Opbrengst] Projectboeking wordt alleen gemaakt voor kostenrekening, niet voor passiva rekening aan debetzijde, niet voor de omzetrekening aan creditzijde.",ERP
+Koppeling Ubeeo en Afas verzendt omschrijving in plaats van code voor vrije velden.,Algemeen
+[Itemcode verkooprelatie | management en autorisatie tool] Tabbladen voor itemcode verkooprelatie zijn niet zichtbaar in autorisatie- en management tool.,ERP
+"Weken 1 t/m 6 worden altijd getoond bij werkrooster onboarden, ook als het aantal weken kleiner is dan 6",HRM
+"[Wens I Prijslijst I Alle I Weergave] Lijst maken met prijzen per artikel in AFas ordermanagement lukt niet, niet alle prijslijsten zichtbaar.",ERP
+[Transitievergoeding] Hoe voeg je op de juiste manier een transitievergoeding toe?,HRM
+[Aanvullend geboorteverlof][Inrichting] Aanvullend geboorteverlof - uitkering wordt vanuit UWV aan medewerker uitbetaald,HRM
+Geen aantal uren zichtbaar in LC 26921 bij analyse KA_Medewerker journaalpost per kostenplaats 1.,HRM
+[ABN ARMO] [API koppeling] Probleem bij ophalen bankafschriften en transactiecodes na uitbreiding bankkoppeling. Bankafschriftnummer wordt niet gevuld en transactiescodes werken niet.,ERP
+[Datacenters] Gegevensopslag in AFAS: exacte adressen van datacenters in Nederland vereist.,Algemeen
+[Sollicitanten] Geen autorisatie op sollicitant / vacature via selectie,HRM
+"[Pensioenaangifte] Aangiften zijn onverwerkbaar door foutief aansluitnummer; melding: ""Er zijn geen gegevens gevonden voor deze werkgever/jaar/periode.""",HRM
+[managementtool][vrije velden][zichtbaarheid in Profit] Velden in tabblad cursus zijn niet zichtbaar in Profit,HRM
+[Weergave] Einddatum contract is niet leeg | wordt gevuld met waarde vorige contract,HRM
+[Weergave] Einddatum contract is niet leeg | wordt gevuld met waarde vorige contract,HRM
+"Hoe richt ik in dat een gebruiker via InSite niet via het reactie onderdeel een reactie kan toevoegen, maar dat dit altijd via de workflowactie moet?",ERP
+Gegevens in Profit kunnen niet gekopieerd worden na belangrijke update.,Algemeen
+Eigen pagina voor Finance op InSite met takenlijst voor declaraties.,Algemeen
+Kenmerk 2 '241 Verzuim' is niet zichtbaar bij het type dossieritem.,Algemeen
+[Wens] Bestemming van vrije type dossieritems niet zichtbaar bij 'Starten in aanpassen' in workflow.,Algemeen
+Foutmelding bij verlofregistratie verhindert registratie tijdelijke vervanger in HRM.,Algemeen
+"[Blokkeringen] Functie 'herb. cumulatieven' opent niet meer na administratie-update, alleen herbereken activa werkt.",ERP
+[Beoordelen Adreswijziging] Kan de waarde van de parameter niet opslaan; overlapt met een andere parameterwaarde,HRM
+[InSite | niet geautoriseerd | gegevensfilter | inkoopfactuur] Autorisatieprobleem bij toegang tot materieelbeheer in Afas Insite: geen toegang.,ERP
+"Inhouding HOP premie wordt niet meegenomen in grondslag ""WAS: Netto equivalent minimumloon"".",Algemeen
+"HEIC-bestanden kunnen niet geopend worden; foutmelding: ""DE HEVC-videoextensie is vereist om dit bestand weer te geven.""",HRM
+[Automatisch Factureren] Facturen met datum 31/03/2025 voor verlenging abonnementen in boekjaar 2024.,ERP
+[Outlook] Gebruik van vastlegknop in Outlook: rode/blauwe of blauwe A?,Algemeen
+Foutmelding bij aanmaken inkooprelatie: 'De ingevulde waarde voor veld 'Woonplaats' bestaat niet'.,Algemeen
+[Medewerker][Weergave] Telefoonnummer(s) medewerker(s) toevoegen aan weergave,HRM
+[Aanvullende gegevens] De aanvullende gegevens kunnen niet worden geregistreerd. Het adres is niet volledig en de optie 'Adres aanmaken' staat aan.,HRM
+[Verzuim] Gesimuleerde begindatum doorlopend verzuim,HRM
+[wens] Verkooporder overzicht toont niet of order volledig voorradig is.,ERP
+Aanpassen van BTW-tariefgroep in een gejournaliseerde handmatige verkoopfactuur.,ERP
+"Geen ontvangst van inloggegevens voor online cursus AFAS SB, graag opnieuw versturen.",ERP
+Maximaal loon voor Premie WN Inhouding onder vlgnr 6 plaatsen?,HRM
+Afdeling invullen in samengevoegde boekingsregels is niet mogelijk.,ERP
+"Verzoek om factuur voor ontvangen bedrag van €2812,95 zonder koppeling.",ERP
+[ABP] Foutmelding: The supplier with IdLcr x is not authorized to submit 1 or more time periods (start date x) in this message for this employer with payroll tax number x The message has not been processed.,HRM
+[Loonaangifte][Signaal] Foutcodes L1812 en L1813 door ontbrekende bijtelling privégebruik auto voor werknemer 102803.,HRM
+Controle op toevoegen van encrypted document in contractmodule voor ondertekening.,ERP
+[Project | OHW | Factuurtermijnen][Optimalisatieproject] Factureren van termijnen na afsluiten project met OHW niet mogelijk.,ERP
+Vrij tabblad op sollicitant niet zichtbaar op InSite,HRM
+"Aanvraag blijft openstaan na keuze ""klaarzetten voor genereren inkooporder"".",ERP
+[Financieel][Debetnota] Debetnota aanmaken op geboekte aankoopfactuur voor betwisting met advocaat.,ERP
+"[Analyse] Downloaden van analyses mislukt na voltooien, geen gegevens ontvangen.",Algemeen
+[BTW Code] Factuur aanmaken zonder BTW leidt tot melding: vereiste BTW code niet ingericht.,ERP
+Eindstand bedrijfsgebouwen/-terreinen komt niet overeen met geconsolideerde eindstand balans.,ERP
+[Formatieverdeling] Gebruikersgroep wordt niet correct gekoppeld aan functie Teamleider personeelsadministratie (2130).,HRM
+Traagheid van AFAS Profit bij financiële mutaties zonder specifieke foutmeldingen.,Algemeen
+"[Wens IPv6] Website sts.afasonline.com is onbereikbaar via IPv6, poort 80 reageert niet.",Algemeen
+"Facturen in OutSite tonen die niet als ""Email verwerkt"" of ""Afgedrukt"" zijn gemarkeerd.",Algemeen
+"Facturen in OutSite tonen die niet als ""Email verwerkt"" of ""Afgedrukt"" zijn gemarkeerd.",Algemeen
+"[Wens] Opmaak van memoveld in contracten wordt niet correct weergegeven in PDF, met rare tekens en lege pagina's.",Algemeen
+[Bonnetjes scannen] Herkenning van fake/nep bonnen in AFAS Pocket met nieuw scan en herken functionaliteit.,Algemeen
+"[Niet geautoriseerd] Autorisatiefout bij openen dossieritem -107 E-mail signaal, ondanks juiste instellingen.",HRM
+Inlezen van CAMT .053 bestanden met overlap in mutaties vanaf 01-10-2024.,ERP
+[Outsite] Probleem bij het instellen van certificaat voor OutSite pagina: Het is tijd om het certificaat voor je domein te verlengen. Er is een AAAA record aanwezig op het domein welke verwijst naar een foutief IPv6 adres.,Algemeen
+"Fout bij versturen Arbo meldingen: alleen gewijzigde melding verzonden, niet nieuw.",HRM
+[Profit BI]Overzicht van gebruikte dashboards in Profit BI voor Omgevingsdienst Zuidoost-Brabant.,HRM
+[Profiel] [Instuurder] [Zichtbaar] Velden in het beoordeelprofiel Onboarden zijn niet consistent zichtbaar tijdens het proces.,HRM
+Automatische blokkering van gebruikers in klantomgevingen bij uitdiensttreding in moederomgeving.,Algemeen
+[Btw-tariefgroep] Foutmelding bij importeren verkoopfactuur: Subquery returned more than 1 value. Veld VaRc,ERP
+"Jaarlijks document (Integriteitsverklaring) verzenden aan medewerkers, foutmelding over projectkoppeling.",Algemeen
+[FLEX] [prijsafspraak op plaatsing] Inkoopprijs is onterecht nul bij nacalculatie per regel voor kostensoorten.,ERP
+AFAS Insite dashboards zijn niet beschikbaar voor meerdere gebruikers.,Algemeen
+"[RBI | foutmelding | 403 Forbidden] Foutmelding bij 'Communicatieservice verzenden en ontvangen': HTTP 403 Forbidden, Invalid certificate.",ERP
+"[Fout bij Verzenden | SendAsDenied | not allowed to send as]  Verstrekken van inkooporder via Output mislukt, status 'Niet verzonden' bij e-mails.",Algemeen
+[Wachtrij] Foutmelding in wachtrij bij taak Journaliseren: Batchservice is gestopt,ERP
+[Contactpersoon wijzigen/ InSite] Toegang tot 'Portaltoegang' contactpersoon in InSite niet wijzigbaar.,Algemeen
+[SSCC] Keuze uit meerdere SSCC labels bij afdrukken via dropdown-menu.,ERP
+[Servicemanagement vervolg] Terugkoppeling over uren bouwplaatsmedewerker in tijdspaarfonds via Afas.,ERP
+Waarom ontstaan er automatisch jaaroverschrijdende correctie aangiftes?,HRM
+[Pocket] [Profiel] Er zijn geen profielen gevonden voor het aanmaken van een declaratie. Neem contact op met de beheerder.,Algemeen
+[Activering ontvangsten journaliseren] Activering 'Ontvangsten journaliseren' aanvragen in testomgeving T65441AA.,ERP
+"[btw-code] Foutmelding bij aanmaken verkooporder voor verkooprelatie D05921 en samenstelling S12443: ""BTW plicht moet op 'Verkopen binnen EU (3)' staan.""",ERP
+[workflow op basis van signaal] workflow Workflow instellen voor kredietlimietoverschrijding en orderblokkering.,ERP
+"[Sluitingstabel] Verwijderen van feestdag 5 mei voor 1 werkgever in de omgeving, hoe doe ik dit?",HRM
+[Profit communication center] Verzoek om PCC bestand (pcc.msi) voor systeemmigratie.,Algemeen
+[vrij bestandsveld InSite] Extra veld toevoegen aan InSite pagina voor verkoopactie met naam projectcoördinator.,ERP
+Foutmelding bij indienen aangifte omzetbelasting zonder verdere informatie.,Algemeen
+Vrij veld aanmaken op verbijzonderingscode,ERP
+[Citrix] Profit sluit automatisch af na inactiviteit,Algemeen
+"[Workflow] Conditie werkt niet zoals verwacht, datumveld 'kleiner dan' (<)  pakt ook lege velden.",Algemeen
+[Sollicitatie][Onboarden] Sollicitatie wordt niet automatisch afgehandeld bij registreren Onboarden,HRM
+"[Levering I Debiteur I Zichtbaar I Niet] Debiteur heeft geen vervoerder zichtbaar in tab Facturering, mogelijk verborgen.",ERP
+[Forecast | Contactmoment] Toelichting Contactmoment Forecast niet zichtbaar in Profit,Algemeen
+[Looncomponent] [journalisering] Jaarurenmodel afrekening 2024-2025 mist looncomponent voor uitbetaling.,HRM
+[PCC] Activeren van PCC in testomgeving voor Mollie koppeling lukt niet.,ERP
+[Sollicitaties verwijderen] Verwijderen van interne sollicitaties van afgewezen kandidaten zonder de gehele sollicitant te verwijderen.,HRM
+[Inlogportaal | Inloggen niet mogelijk door foutmelding. Afas.Online.IdentityProvider.Exceptions.IdentityProviderException: identity_error: Return url not found in request.,Algemeen
+[Onboarden] Document indienst niet te koppelen in de workflow,HRM
+"[Wens][Pocket] Verzoek om vrij veld toe te voegen aan AFAS Insite, Wie is Wie voor medewerkers.",HRM
+"[boekings-programma kan niet worden gestart] Geen balie/directiefactuur aanmaken, foutmelding: ""Boekingsprogramma kan niet worden gestart.""",ERP
+[Loginanalyse] Informatie ophalen over de laatste inlogmomenten van gebruikers in AFAS.,ERP
+[Contractbeheer] [Verkoop] Geen contractenmodule voor de verkoopkant binnen Finance,ERP
+Omlijning afbeelding in rapport blijft staan ook al wordt deze verwijderd. Het lijkt erop dat de settings niet worden opgeslagen.,ERP
+[Flex | reserveringen | zzp | uitzendkracht] Uitzendkracht kan opgebouwde reserveringen niet ontvangen na switch naar zzp'er.,Algemeen
+"Foutmelding bij herindienst melding: ""De ingevulde waarde voor het veld 'werkgever' bestaat niet.""",HRM
+[Wettelijk verlof][Langer geldig] Instellen van wettelijk verlof voor langdurig zieke werknemer zonder vervaldatum.,HRM
+[Declaratie] Favoriete dienstreis krijgt de verkeerde al opgeslagen datum mee.,HRM
+[Soort medewerker] Kan je nieuwe waarde toevoegen aan de tabel Soort medewerker?,HRM
+"[BTW Aangifte l Onderdrukken] Aangifte Btw/icp maart definitief, niet verzenden en handmatig indienen.",ERP
+"[pakbon | artikelinstellingen project doorbelasten] Factuur genereert niet alle regels van pakbonnen, twee regels ontbreken.",ERP
+[projectprofiel] Gebruik van twee verschillende factuurlayouts binnen één administratie op basis van project.,ERP
+Proefberekening vanaf juni 2025 geeft te hoge premie zonder franchise.,HRM
+Ontvangstboeken uitschakelen voor inkooporderregels in InSite.,ERP
+[vrij veld] Toevoegen van tekstveld voor uitgebreide artikelomschrijving in ordermanagement.,ERP
+[Import | fin mutatie] Foutmelding bij financiële conversie: 'Object variable or With block variable not set' bij inlezen mutaties dagboek 15.,ERP
+[Gebruikerscode] [Gewijzigd] Geen data zichtbaar op Insite. Taken niet zichtbaar.,Algemeen
+"[PCC] Bijlages van facturen worden niet geopend op Werk-PC, verschijnen ineens in Downloads-map Privé-PC.",Algemeen
+"[Pensioenaangifte] Foutmelding: unexpected response received after calling LOY upa service"".",HRM
+[Profiel] Functiewijziging toont oude en nieuwe opmerking gelijktijdig bij beoordelen.,HRM
+[e-factuur UBL] Verwerken van UBL-factuur mislukt door onbekende crediteur; geen aanpassingen mogelijk.,ERP
+Loonheffingsverklaring (-169) wordt niet overgenomen in Belastingdienst instantiegegevens.,HRM
+[Import Export] Aanpassen weergave datum projectbegroting van 01-01-2023 naar 01-01-2025.,ERP
+"[E-factuur] Foutmelding bij inboeken XML inkoopfactuur: ""Aantal maal prijs wijkt af van regelbedrag""",ERP
+"[Insite] Invulformulier op OutSite verzendt geen e-mail na indienen, berichtsjabloon niet aangeboden.",HRM
+"[ESS / Dossier / Pocket] Veld 'Medewerker' in Pocket app verplicht handmatig invullen, kan dit automatisch?",Algemeen
+[Rest-koppeling | connector | internal 500 server error] Foutmelding bij het oproepen van de connectoren: Server error: Rest services geven nu 500 melding bij alleen token als plain tekst als authorization header,ERP
+[Payroll Auditor] Parttimer met overuren terwijl de medewerker fulltimer is,HRM
+"Ophalen van velden 'bewaartermijnen', 'aantal jaren' en 'peildatum' in analyse.",Algemeen
+[import] Foutmelding bij openen of importeren van verkooprelaties: specifieke instellingen voor landwetgeving 'BE' controleren.,Algemeen
+[Rest-koppeling | connector | internal 500 server error] Foutmelding bij het oproepen van de connectoren: Server error: Rest services geven nu 500 melding bij alleen token als plain tekst als authorization header,Algemeen
+[PowerBI] [Versie] Versie van Power BI Desktop voor compatibiliteit met templates: Kan de sjabloon niet openen. X is incompatibel met uw huidige versie van Microsoft Power BI Desktop.,Algemeen
+[Wet verbetering poortwachter] Geen signalen voor periodieke evaluatie bij medewerker met verzuimtype Z.,HRM
+[Wens] [powerBI] Aanpassen van de variabelenaam in de PowerBI URL voor project ID.,ERP
+"Foutmelding bij workflow onboarden: 'Verantwoordelijke' bestaat niet, selecteer waarde.",HRM
+[SSCC] [Tekst] SSCC labels tonen opmerkingenveld als barcode in plaats van tekst,ERP
+Verzamelloonstaat per persoon per periode genereren in AFAS.,HRM
+Aanpassen van bestemming op Inside-pagina werkt niet na publicatie.,Algemeen
+"[E-factuur] Dubbelklikken op UBL-documenten opent e-facturen verwerken, niet PDF-eigenschappen.",ERP
+[Shared mailbox] [Gedeelde postvakken] Vastleggen vanuit Outlook met de invoegtoepassing van E-Mail in Office 365 op een gedeeld postvak werkt niet,Algemeen
+"[installatie citrix] Citrix installatie levert andere gegevens dan in video, hulp gevraagd.",Algemeen
+"Verlofprioritering per CAO instellen, maar wordt toegepast in alle cao's",HRM
+[Autorisatierol] Persoonlijke rol of tijdelijke rol medewerker importeren of via connector updaten,HRM
+"[Rapport | verkooprelatieprofiel] Vertaling komt niet goed door in offerte, voorbeeld: Artikel cockpit = Special TAVA/Time out (SP00173).",Algemeen
+Zoeken naar profielinstellingen voor forecast in AFAS Profit.,Algemeen
+[Inrichting] Opslaan van PDF als bijlage onder dossieritem in project lukt niet.,Algemeen
+"Ouderverlofaanvragen zijn niet zichtbaar voor teamleads, controleer workflows.",HRM
+[Draaiboek sollicitant] Is het vanaf Profit 6 mogelijk om vrije dossieritems te gebruiken vanuit draaiboek sollicitant?,HRM
+[Wachtrij] Loonstrook via wachtrij automatisch verstrekken geeft fout | The operation has timed out.,HRM
+"[Plaatsing | versie] Foutmelding bij plaatsingen in klantovereenkomst, consistent bij specifieke plaatsingen. Object variable or With block variable not set",Algemeen
+"Wachten op printerverbinding bij het starten van de Omgeving, herhaaldelijk.",Algemeen
+[Foutmelding] Foutmelding bij financiële mutaties in inkoopboeking: kan niet verder met Profit.  Cannot call Arrange on a UIElement with infinite size.,ERP
+"Aanpassen van periodetabel van ""4 weken Financieel"" naar ""Maand Financieel"" niet mogelijk.",ERP
+[Mailserver] [Entra] Koppelen van een aparte Entra-ID voor de testomgeving is niet mogelijk.,Algemeen
+"Pakbon kan niet vrijgegeven worden na gereedmelding, hoe dit op te lossen?",ERP
+"Fout bij verzenden van BTW-aangifte, geen specifieke foutmelding gegeven.",ERP
+"[Contractverlening] Aanpassen van fte per dag bij medewerker niet mogelijk, velden zijn uitgegrijsd | Standaard rooster",HRM
+[Vervoermiddel] Kilometerstand uitvragen geeft foutmelding: De einddatum van het leasecontract mag niet kleiner zijn dan de einddatum van het vervoermiddel contract bij medewerker X,HRM
+[Digipoort] Geen VIA-gegevens ophalen bij het openen van IB 2024.,ERP
+"[icp-aangifte | verzenden mislukt] Foutmelding bij versturen ICP-aangifte: ""Het is - met de huidige verzendstatus - niet toegestaan de aangifte te verwijderen.""",ERP
+XBRL is ongeldig bij indienen IB-aangifte 2024 door taxonomie regels.,ERP
+[Client IB | Partner | Accountancyportal] Toegang tot accountancyportal voor parteraangifte.,ERP
+Aanpassen van 5 mei als nationale feestdag in de cao instellingen.,HRM
+Foutmelding bij openen beoordeelpagina onboard (-170): The given key 'Z30' was not present in the dictionary.,HRM
+Afgekeurde contracten zijn niet zichtbaar voor alle inkopers in 'Alle afgekeurde contracten in de workflow'.,ERP
+ING bankkoppeling voor SB ondernemen,ERP
+Rechten HR Support in AFAS voor mailen naar HR en Directie zonder toegang tot dossier/salaris.,Algemeen
+[Pocket] [Verzuimverloop] Vrij veld 'Diagnosecode' wordt niet getoond in AFAS Pocket app.,Algemeen
+Instellen verzamelmethode 'verplichting per inkooporderregel' in profiel en boekingslay-out.,ERP
+Foutmelding bij genereren signaal: Inserted value does not meet the length requirements for field 'Zakelijk mailadres' (U72F43447955140DD8A56A870CAE6A50C). Max length = 30,HRM
+"InSite publiceert niet correct in testomgeving T91899TV, foutmelding ""niet gevonden"".",Algemeen
+[Bijlage] [Overzicht] Diploma in InSite openen lukt niet; regel met bijlage is niet klikbaar.,HRM
+[back-up | terugzetten] Herstel van verwijderde financiële mutaties en terugzetten back-up vóór 18-04-2025.,ERP
+Verliesverrekening Bellagio Beheermaatschappij NV in aangifte 2023 Kokobel BV ontbreekt.,ERP
+"Foutmelding bij maken van GetConnector met logtabel voor inkooporder. "" Cannot find getconnector fields.""",ERP
+[Proforma] Hogere premie bij proefberekening pensioen,HRM
+Hoe zie ik waar een inkoopfacturenworkflow is blijven hangen,ERP
+Instellen van LC 1034 voor uitbetaling waarde vakantieuren werkt niet zoals verwacht.,HRM
+Aanpassen afschrijvingsvoorwaarden voor meerdere hardware-activa met verschillende aanschafperiodes.,ERP
+Afstand woon-werk wordt niet automatisch bijgewerkt in looncomponent bij onboarden.,HRM
+Foutmelding bij indienen BTW: 'Neem contact op met support' veroorzaakt door correcties.,ERP
+Fout bij verzenden van aangiften BTW/ICP: foutmelding verschijnt na stappen in Communicatieservice.,Algemeen
+[PCC] POCI-instellingen opslaan. Lokale schijf niet zichtbaar,HRM
+[Blokkering] XML-generatie voor administratie 99 geannuleerd; aangifte opent niet meer.,ERP
+[Export I Weergave I Verkoop I Dagboek] Exporteren van verkoopjournaalregels naar Excel vanuit financiële mutaties.,ERP
+[Geldigheidscombinaties] Uitsluiten van ongewenste urensoorten bij uren schrijven op project.,ERP
+Profit AVG anonimiseren testomgeving,Algemeen
+[btw-code | btw-tariefgroep] Kan geen concept aanmaken dat vrijgesteld is van BTW; bestaande concepten zijn gewijzigd naar vrijgesteld.,ERP
+"[Cookies] Toegang geweigerd tot Portal Medewerker Keuzemodel in sitebeheer na selectie. Foutmelding: ""U heeft geen toegang tot (dit deel van) deze website.""",Algemeen
+[export e-factuur] Exporteren van alle geboekte e-facturen als losse PDF-bestanden.,Algemeen
+[GetConnector I Leeg] Getconnect 'Prijslijst per Debiteur' geeft alleen output voor datum vandaag.,Algemeen
+Voorkeurwaarden management tool werken niet door bij Updateconnector KnPurchaseRelationOrg,Algemeen
+"[Projecten | termijnfactuur] Foutieve btw-berekening bij factuurtermijnen, inclusief en exclusief bedragen kloppen niet.",ERP
+"[Vrije tabel] 'Reden einde Arbeidsovereenkomst' niet zichtbaar, verplicht veld foutmelding.",HRM
+[Koppeling | Woomerce] Verwerken van ZV-artikelen in AFAS en tonen als 'op voorraad' in WOO. Artikelen zonder voorraad moeten voorraad hebben vanuit koppeling. Is dit in te richten?,ERP
+"[vrij veld] Contactpersoon op factuur blijft zichtbaar, ondanks pogingen tot verwijdering.",ERP
+[Contract] Werkgever 'Personeel Niet in Loondienst' kan niet gewijzigd worden naar 'Stichting Versa Welzijn'; naam blijft grijs.,HRM
+[licentie] Aanpassen van AFAS-abonnement door afsluiten van onzichtbare testomgeving en gebruikersaantal verlagen.,ERP
+[weergave aanpassen] Aanpassing van weergave in rekeningoverzicht en openstaande posten naar aantal dagen openstaand.,ERP
+[Cao gemeente][Ouderschapsverlof] Overgang van betaald ouderschapsverlof naar aanvullend verlof met verschillende doorbetalingspercentages. Wat te doen met historische aanvragen en TWK's?,HRM
+[Gebruiker / Medewerker / Persoon] Mogelijkheid om de werkgeverprefix bij medewerkernummering ook door te laten werken op de persoonsnummering en gebruikerscode,HRM
+"[Looncomponent] Kopiëren looncomponent niet mogelijk ""onderhoud door AFAS (niet kopieerbaar)""",HRM
+"[Onboarden] Actieknop 'Registreren onboarden' is niet zichtbaar in de workflow, hoe kan dit?",HRM
+Documenten niet zichtbaar in onboarden workflow voor toevoeging bijlage.,HRM
+"[Template looncomponent] Bruto bonus telt in op pensioengrondslag, hoe kunnen wij ervoor zorgen dat dit niet gebeurt?",HRM
+"Bestemmingen in workflow onboarden werken niet, sollicitatie komt niet langs.",HRM
+"[Bellen 19-05] Facturen afletteren bij boeken in AFAS Profit na wijziging, kan dit uitgezet worden?",Algemeen
+[Onboarden] Verplicht veld bij beoordelen ondanks context 'Geen adres (Profit)' zonder adresgegevens.,HRM
+Samenstelling C-MILL Miditower-63136_C vraagt voorraadbehoefte zonder open order.,ERP
+Samenstelling C-MILL Miditower-63136_C vraagt voorraadbehoefte zonder open order.,ERP
+[Wens | Afschrijvingstermijn]  Instellen van afschrijvingstermijn in maanden bij Vaste activa.,ERP
+"[Land wetgeving administratie] Wijzig land wetgeving van administratie O32892AA van NL naar DE, keuze niet mogelijk.",ERP
+[Inkoopfactuur | workflow procuratieschema] Inkoopfactuur in Insite blijft hangen bij tweede beoordelaar zonder dat deze bestaat.,ERP
+[ADV OSV] Hoe werkt OSV (ouderschapsverlof) in combinatie met verlofopbouw op basis van aanvullende roosteruren,HRM
+[Abonnement | Factuurdatum] Klaarzetten abonnementsregels krijgt een andere factuurdatum dan ingegeven bij de wizard.,ERP
+[Geplande taak][Verstrekking loonstrook] Tijdstip aanpassen automatisch versturen loonstroken,HRM
+[Inrichting InSite] Overzicht met Plaatsingen (type dossieritem -101) kan niet worden weergegeven.,Algemeen
+Onjuiste BTW-aangifte bij ICL levering naar UK van 61 € ondanks correcties.,ERP
+"[Gebruiker][Mailadres]Aanpassen mailadres voor portal mislukt, e-mailadres al in gebruik.",HRM
+Verwijderen van een nieuw aangemelde medewerker zonder verloning: instructies en acties.,HRM
+[Citrix Workspace Detecteren] ik kan niet inloggen omdat ik bijgaand scherm krijg,Algemeen
+[RABO] Fout bij verzenden: specifieke handeling mislukt zonder wijzigingen in software of omgeving.,Algemeen
+"[Foutmelding][OutSite] Inloggen op AFAS OutSite lukt, maar documenten openen geeft ""Fout: er is iets misgegaan"". exception_message : Loading chunk 570 failed.",HRM
+[Pensioen][Aangifte] Uitsluiten stagiair van UPA aangifte BPL Pensioenfonds met terugwerkende kracht vanaf 20-08-2024.,HRM
+We hebben veel gebruikers met foutmeldingen in insite of traagheid. Ook loopt Profit vast bij sommige gebruikers,Algemeen
+"[confronteren] Foutmelding bij confronteren: ""De ingevulde waarde voor veld 'Factuurnummer intern' bestaat niet.""",ERP
+[Project | nacalculatieregels] Aanpassen van nacalculatieregels in project leidt tot foutmelding.,ERP
+Verbijzonderingscode ***** wordt automatisch aangemaakt bij journaliseren salarisverwerkingsperiode zonder boeking.,Algemeen
+ID-check verplicht stellen voor sollicitanten in profielinstellingen.,HRM
+"[Betaalbestand] Foutmelding ""het bestand kan niet worden weggeschreven op de aangegeven locatie""",HRM
+[Jaarovergang rapporten erf/schenk] Jaarovergang 2024/2025 kan niet aangevinkt worden in Erfbelasting 2025,ERP
+[Signaal / Workflow / Toelichting] Aanpassen toelichting bij taak voor wagenpark in Insite.,HRM
+"[blokkade] Btw/icp-aangifte opent niet in administratie, meerdere gebruikers ervaren dit.",ERP
+"[Inkoop / Zorg] Mogelijkheid om voorraadartikelen te blijven bestellen via bestelvoorstel, maar wel verstrekken via XML. Wat zijn de gevolgen van switch van PDF naar XML?",ERP
+[autorisatietool][gebruikersgroep] Er is geen administratie actief. Je hebt geen toegang op één van de administraties op basis van de autorisatie,HRM
+[Stagiair][Pensioenaangifte] Stagiaire wordt onterecht aangeleverd in 2024,HRM
+Overzicht brutouurlonen met afwijkend uurloon ontbreekt in rapporten en analyses.,HRM
+[Rekeningnummer belastingdienst] Betaling belastingdienst pakt verkeerd rekeningnummer van AVRB in plaats van Perfection.,ERP
+Status wens Meerdere kostenplaatsen per contractregel,ERP
+[Verlof] Verlof aanvragen uitschakelen in AFAS InSite en AFAS Pocket voor alle gebruikers.,HRM
+Voorkeurwaarde voor vrij veld “Ter attentie van (30)” wordt niet getoond in boekingslay-out “Inkoopaanvraag - Dustin”.,ERP
+[Plaatsing | sluiten] Terugdraaien van declaraties 000000006560.01 en 000000006561.01 geven de foutmelding: De ingevulde waarde voor veld 'Dossieritem' bestaat niet. Gebruik het zoekvenster om een waarde te selecteren.,ERP
+"[Aangifte] Het parttime percentage dat u doorgeeft, is hoger dan toegestaan. Controleer en corrigeer het parttime percentage en doe opnieuw pensioenaangifte.",HRM
+"[Bankkoppeling] Salarisverwerking loskoppelen van bankkoppeling, automatische verwerking blijft actief.",HRM
+"[Licentie] Licentie limiet bereikt: gebruikt 184, maximum 170, terwijl er 176 actieve medewerkers zijn.",HRM
+"[Licentie] Licentie limiet bereikt: gebruikt 184, maximum 170, terwijl er 176 actieve medewerkers zijn.",HRM
+[Doorlopend verzuim] Signaleren van doorlopend verzuim bij gelijke reden na zwangerschap/bevalling.,HRM
+[Workflow] Actieknop niet zichtbaar op InSite voor externe beoordelaar,Algemeen
+[Digitaal ondertekenen] Foutmelding bij ondertekenen | Cannot sign encrypted document. Invalid decryption mode,HRM
+"Foutmelding ""Not logged in"" bij integratiepagina voor interne vacatures.",HRM
+[Rente][Looncomponent] Welk looncomponent is te gebruiken voor de (wettelijke) rente betaling salaris,HRM
+[CAO Woondiensten] Vragen over de inrichting van salaristabellen en instapsalarissen in CAO-Woondiensten.,HRM
+[CAO Woondiensten] Vragen over de inrichting van salaristabellen en instapsalarissen in CAO-Woondiensten.,HRM
+Accordering ongedaan maken op nacalculatieregel(s) lukt niet: One or more lines are invoiced already,ERP
+[Bezettingsoverzicht] Filters toepassen op Medewerker bezettingsoverzicht MSS voor specifieke dienstbetrekkingen.,HRM
+"[RVU] RVU-uitkering onterecht volledig uitbetaald in april, moet halverwege stoppen.",HRM
+"[Eigen dossieritem] Geen toegang tot pagina in SelfServicePortal voor medewerkers: ""Je hebt geen toegang tot deze pagina.""",HRM
+Vragen over het leveren van tokens vanuit een groep en template-updates in Power BI.,Algemeen
+Wat gebeurt er precies bij selectie 'Gehele factuur' voor incasso?,ERP
+"Foutmelding bij onboarding rijdend personeel: ""De geselecteerde periodetabel kan niet gebruikt worden voor HRM/Payroll.""",HRM
+Optie 'gelijk journaliseren' niet zichtbaar bij declaraties factureren.,ERP
+[CAO Woondiensten] Verwerking van salarisregel voor medewerker in instapschaal | Welke salaristabel?,HRM
+[Fout][RBI] Foutmelding bij verzenden loonbelastingaangifte: Error executing request.,HRM
+[Workflows] Workflow aanmaken die start bij afsluiten plaatsing en ingaat per 1-6-2024.,Algemeen
+[Salarisverwerking] Hoe wordt looncomponent ''Gemiddelde meeruren over referteperiode t.b.v. ziekengeld'' (135.021.505) berekend?,HRM
+Wijzigingen in formatieverdelingsregels zijn niet zichtbaar op de beoordeelpagina.,Algemeen
+[Klantportal] [Cursus] Opgeven nieuwe medewerker voor AFAS trainingen met privé e-mailadres en later wijzigen.,HRM
+Begeleidend e-mail sjabloon voor incassoklanten toont dubbele factuurregels.,ERP
+[Aangifterapport] Geen aangifte rapporten selecteerbaar voor,HRM
+"[Project I niet I ingevuld] Projectnummer niet zichtbaar bij openstaande posten, ondanks correcte factuurinstellingen.",ERP
+[KvK | Deponeren | Rapport] Foutmelding bij deponeren cijfers 2023: exacte beschrijving van de foutmelding ontbreekt.,ERP
+"[Conditie] Onterecht afgeronde items in workflows door foutieve conditie ""Datum uitdienst <[Vandaag]"".",HRM
+"[Geblokkeerde gegevens] Afschrift van 13 maart geblokkeerd na vastlopen in Afas, geen blokkering zichtbaar.",ERP
+"[Geblokkeerde gegevens] Afschrift van 13 maart geblokkeerd na vastlopen in Afas, geen blokkering zichtbaar.",ERP
+[Roosterwijziging] Veld Organisatorische eenheid niet bijgewerkt in InSite na wijziging.,HRM
+"[Balans en Toelichting op de balans met tekst] Rapport ""Balans"" niet zichtbaar in Rapportagecockpit, terwijl het onder beheer staat.",ERP
+Dossierprofiel blokkeren in AFAS Pocket geeft foutmelding: Kan het profiel niet opslaan. Het is niet toegestaan om een profiel te blokkeren als dit nog in gebruik is. Het profiel is nog in gebruik bij de instellingen AFAS Pocket.,Algemeen
+[autorisatie] Toegang tot Afas voor externe partij met rechten voor alle tabellen en connectoren.,Algemeen
+[Inkoopfactuur | verplichting | geblokkeerd voor betaling] Facturen van crediteur Adyen worden zonder beoordeling goedgekeurd in administratie 8.,ERP
+[Kenmerk | Betaalopdracht | Boekstuk | Factuur] Batchbetaling toont geen factuurnummers in de omschrijving voor MCB Direct.,ERP
+Vervanger instellen voor zieke leidinggevende met dezelfde taken.,HRM
+[Inkoopfactuur | workflow] Beoordelaar in de workflow wordt niet aangepast na wijzigen van beoordelaar in de financiële mutatie,ERP
+"Vragen over dataveiligheid, architectuurplaten en kosten van de OpenAI service.",Algemeen
+SBI-indeling 2025: biedt AFAS ondersteuning voor conversie en import van codes?,Algemeen
+[Onboarden] De ingevulde waarde voor veld 'Cao' bestaat niet. Gebruik het zoekvenster om een waarde te selecteren.,HRM
+[Flex] G-rekening verschijnt niet op de factuurrapporten. Was aanwezig maar is nu verdwenen. Geen project of klantovereenkomst in de kop van de factuur zichtbaar.,Algemeen
+[Autorisatie I InSite] Toegang geweigerd bij openen notitie 'Bonus over 2024': Je hebt geen toegang tot deze pagina.,Algemeen
+"[BTW verlegd] Btw wordt niet berekend op factuur, foutmelding D018.",ERP
+[Contract] Contractverlenging stagiaire mislukt door foutmelding: 'Soort medewerker' moet gelijk blijven.,HRM
+[Medewerker] Zoeken naar AOW-leeftijd van medewerker in Profit en automatische berekening controleren.,HRM
+[Workflow] Onboarden met contractvoorstel - ACSI NIEUW is niet zichtbaar.,HRM
+"Zoeken naar een gebruiker in CRM zonder resultaat, ondanks aanmaak als medewerker en sollicitant.",Algemeen
+[Vervoerder] Overzetten aanlevering van EXW naar FCA en opties in 'vervoerder' ontbreken.,ERP
+[Weergave][Formatieverdeling] Formatieverdelingsregels en percentages tonen in medewerkersweergave lukt niet.,HRM
+[Licentie] Testomgeving instellen voor O38817AA zonder wekelijkse kopie.,Algemeen
+[Verzuim] Logging tijdstip ziekmelding en tijdzoneverschil; welke gegevens worden gebruikt?,HRM
+"Veld 'Mobiel werk' is niet zichtbaar in weergave 'Medewerkers (alle) uitgebreid', ondanks actieve zichtbaarheid.",HRM
+[Facturen | Autorisatie] Facturen kunnen niet worden aangepast; tekstregel blijft grijs. Kan geen nieuwe regel toevoegen aan facturen,ERP
+Vraag over unieke combinatie van velden in getconnector Azure_Salarisverwerking_inc voor dublieken.,Algemeen
+[Rapport I overlap] Factuurdetails lopen door voettekst heen bij lange specificaties.,ERP
+[Onboarden] Velden Verantwoordelijke en Organisatorische eenheid,HRM
+"BTW tariefgroep geblokkeerd bij aanmaken nieuwe bestelling via OCI, controleer wijzigingen.",ERP
+"[Onboarden] Knop ""aanpassen"" blijft zichtbaar bij ondertekenen arbeidsovereenkomst, ondanks autorisatie-instellingen.",HRM
+[partijnummers | partijartikel  | samenstelling | maakartikel] Foutmelding bij omzetten productieorder naar productiebon: serie- en/of partijinformatie ontbreekt.,ERP
+[Intern | Verkeerde Abbo] Foutmelding bij wijzigen journaalpost na conversie naar Profit ERP: exacte melding onbekend.,ERP
+[Onboarden] Aanpassen standaardwaarde veld Actie lopend dienstverband naar leeg lukt niet.,HRM
+"[BTW/ICP] BTW-aangifte openen in administratie 'Inspirateurs' lukt niet, geen foutmelding.",ERP
+Mogelijkheden voor het ruilen van feestdagen in AFAS Profit.,HRM
+"[Blokkade] AFAS blijft hangen bij debiteuren factuurboeking: ""Deze factuur is volledig geblokkeerd"".",ERP
+[WFI 30-04] Kwartaalsuppletie voor vierde kwartaal 2024 genereert niet automatisch.,ERP
+Weergave van openstaande acties in Dossier toont geen -5 inkoopfacturen.,Algemeen
+Aanpassing BHV-vergoeding per 1 juli in CAO VVT,HRM
+[Declaratie | wijzigen] Declaratie 000000011256.01 kan niet gewijzigd worden; velden zijn niet muteerbaar. Declaratie is niet goedgekeurd of geaccordeerd. Declaratie is geaccordeerd voor payroll,Algemeen
+Geen bankdata ontvangen van Rabobank rekeningen sinds 3 april 2025.,ERP
+Definities van de rollen 'contracteigenaar' en 'contractverantwoordelijke' in AFAS.,ERP
+[Signaal] Foutmelding bij het openen van signalen in Geplande taken: voltooid met fouten. Subject combination must exist. The comparevalue of the signaldefinition 'X' is not unique. Validate the comparevalue of the definition,Algemeen
+[Workflow]Taken blijven zichtbaar in takenlijst HR medewerkers zonder afhandelopties. | Fout bij het uitvoeren van gegevensverzameling 'Dossieritem'. Het versturen van een e-mail met berichtsjabloon 'Workflowactie uit dienst' is niet gelukt,Algemeen
+Inrichten van InSite-pagina en inkoopportaal met specifieke tegels en functionaliteiten.,ERP
+Inrichten van InSite-pagina en inkoopportaal met specifieke tegels en functionaliteiten.,ERP
+"[Rapport | inrichting] Aanpassingen in verkooprapport ""Produlab - Verkoopfactuur"" voor pakbon en transportregel.",ERP
+BTW aangifte ID zichtbaar maken in financiële mutaties kolom.,ERP
+BTW aangifte ID zichtbaar maken in financiële mutaties kolom.,ERP
+Blanco berichtensjabloon bij openen van factuur- en herinneringssjablonen.,Algemeen
+[Rapport | Inrichting] Rapporten vanuit Verkooprelatieprofiel tonen alle talen in plaats van enkel ENG. Op orders en offertes afwijken van standaard rapport en gebaseerd op taal de mogelijke rapporten tonen.,ERP
+[Rapport I inrichting] Factuurtekst aan debiteur wordt niet afgedrukt op PDF factuur.,ERP
+"Inkooprelatie aanmaken met verplicht Iban-veld terwijl profiel ""Iban niet verplicht"" is.",ERP
+Verschil in boekingen tussen boekingsdatum en boekstukdatum bij inkoopfacturen.,ERP
+[Verlof][Periodetabel] Fout tijdens bijwerken nacalculatie per week.Datum '30-12-2025' komt niet voor in de gekozen periodetabel (12).Vul deze periodetabel aan.,HRM
+"[Worklfow] Geen gekoppelde gebruikers voor specifieke workflow taak, signaal ontvangen.",Algemeen
+[Signaal] The destination Medewerker is not possible with BasicContact 0.,Algemeen
+[Profiel] Onboarden workflow mislukt door niet-bestaande waarde in veld 'werkgever'.,HRM
+"[abonnement] Geen facturen zichtbaar in dossier KLT-109662, terwijl abonnementsfacturen zijn aangemaakt.",ERP
+Instellen van een filter voor medewerkers op basis van kennisniveau in workflow.,Algemeen
+Foutmelding bij genereren signaal abonnement: Subscription X is not linked with BasicContact Y,Algemeen
+[Pocket] Een of enkele gebruikers ontvangen de activatiemail van AFAS Pocket niet,Algemeen
+E-facturen boeken met 1 regel en bedrag zonder BTW in AFAS.,ERP
+[Adreswijziging] Adres wijziging geeft foutmelding: Kan de waarde van de parameter niet opslaan. Zowel de toepassing als het dienstverband is niet gevuld,HRM
+[Werkgeversverklaring] Salarisgegevens van dienstverband 1 worden getoond bij aanvraag voor dienstverband 2.,HRM
+"Fout bij verzenden van BTW aangifte: ""Er is een fout opgetreden bij het verzenden en ontvangen van de berichten.""",ERP
+[Pocket] Geen koppeling beschikbaar in AFAS Pocket voor 2-factor authenticatie.,Algemeen
+"[Flex] [periodeverloning | item kostensoort | verlonen] Kostensoort voor OV-kosten wordt toch naar Payroll gestuurd ondanks vinkje ""Verl."" niet aangevinkt.",Algemeen
+Niet-benutte zelfstandigenaftrek uit voorgaande jaren wordt niet benut in aangifte 2024.,ERP
+"Analyse toont geen mutaties, terwijl deze wel aanwezig zijn bij het artikel.",ERP
+"Foutmelding ALG0001 bij registratie deponering in Handelsregister, contact KvK voor vragen.",Algemeen
+[Betalingscockpit] Medewerker is niet meegenomen in het betaalbestand,HRM
+"Uitbetaling IKB werkt niet bij invoeren opdracht in AFAS, geen foutmelding zichtbaar.",HRM
+"[PCC] Opslaan in Profit lukt niet op Apple, terwijl het op Windows wel werkt.",HRM
+Aantal regels/deelnemers tonen op rapport deelnemers per evenement,Algemeen
+[consultancymodus][Verwerkingscode]Vakantietoeslag op aparte loonstrook,HRM
+[HRM] Aanpassen van kostenplaatscode in Profit zonder verlies van historie.,ERP
+SEPA-generatie mislukt ondanks het volgen van instructies en video's.,ERP
+[azure | ClientSecretCredential authentication failed | secret key | MUBL] Afas kan geen e-mails verwerken,Algemeen
+"[Rapport I Identifcatie] BTW-nummer verschijnt niet op termijnfactuur, terwijl het correct is ingevuld.",Algemeen
+[integratiesoort] Geen integratiesoort gevonden voor verkoopfacturen Ordermanagement bij specifieke klanten.,ERP
+[inrichting] cafetaria plan,HRM
+[Connector] Contractwijziging in AFAS blokkeert planning in Tamigo tot ingangsdatum nieuw contract.,HRM
+"Bankrekening NL65INGB0101047630 kan niet toegevoegd worden aan organisatienummer 1000881, omdat het al bestaat.",Algemeen
+Afwezigheid op 5 mei in AFAS Insite/Pocket app zonder feestdagstatus.,HRM
+[best practice] [Autorisatie] Verschil tussen rechten op tabblad en rechten op acties in autorisaties.,ERP
+[Licenties] Licenties van abonnement verlagen voor Insite gebruikers en andere gebruikers.,ERP
+[Profiel] Verplichte velden instellen in workflows voor verlofaanvragen en aankopen verlofuren.,HRM
+"Bijlage tonen toont alleen laatst toegevoegde bijlage, niet meerdere opties.",ERP
+"Bijlage tonen toont alleen laatst toegevoegde bijlage, niet meerdere opties.",ERP
+[bijlage opleiding type dossieritem -82] Bijlagen van dossieritemtype -82 zijn niet zichtbaar in Profit.,Algemeen
+"[Cursus] Annuleren van inschrijving voor zelfstudie onboarden, is dit mogelijk?",Algemeen
+Vraag over de betekenis van het 'Limiet' veld bij verlofsoorten.,HRM
+Aanmaken notitie vanaf contractpagina,Algemeen
+"[Filter autorisatie] Nieuwe medewerker ziet geen projecten in Profit, ondanks gelijke rollen en autorisaties.",Algemeen
+[importdefinitie] Importeren van tellijsten in AFAS: zijn er importmogelijkheden beschikbaar?,ERP
+"[autorisatietool | gegevensfilter] Foutmelding bij artikelkeuze in ordermanagement: ""Item (Other revenues) mag niet gekozen worden vanwege filterautorisatie.""",ERP
+[Actief] Verwerking van immateriële vaste activa in AFAS en best practices.,ERP
+[betaalopdracht verdwenen] Betaalopdracht blijft hangen en verschijnt niet in de wachtrij voor verwerking.,ERP
+"[Woonplaats | Adres] Postcode bestaat niet volgens AFAS bij projectaanmaak, ondanks correcte invoer.",ERP
+[e-mailinstellingen facturen | spf record] Facturen naar Magnit Global worden gemarkeerd als verdachte e-mails met links.,ERP
+"[Flex] [Items op Plaatsingsversie| loonafspraak actualiseren] Foutmelding bij plaatsing aanmaken: onder minimumuurloon, wijzig het uurloon.",Algemeen
+"[Flex] [Items op Plaatsingsversie| loonafspraak actualiseren] Foutmelding bij plaatsing aanmaken: onder minimumuurloon, wijzig het uurloon.",Algemeen
+Het beginsaldo in het bestand komt niet overeen met het saldo van het dagboek plus het totaal van de niet-verwerkte bankafschriftmutaties van bankafschriften met de status ingelezen of onderhanden,ERP
+[memoboeking | factuurnummer | grijs] Factuurnummer veld is donkergrijs bij Financieel > Financiële mutaties.,ERP
+Bij het aanmaken van een inkooprelatie wordt de bijlage niet opgeslagen in het dossier.,ERP
+"[Lease a bike | fietsplan] Componenten tellen mee voor pensioengrondslag, uitschakelen niet mogelijk.",HRM
+"[Insite Publiceren] InSite is sinds 30 maart 2025 niet vernieuwd, geen wijzigingen doorgevoerd.",ERP
+[Standaardrooster] Kan je een standaardrooster aanpassen?,HRM
+"[Ouderverlof] Geen ouderverlof saldo voor kind geboren in 2019, recht op onbetaald saldo?",HRM
+[Kortingsgroep] Korting van 0 bij toekennen kortingsgroep aan artikel ondanks actieve staffels.,ERP
+"Uurloon presentatie voor oproepkrachten: bruto uurloon, toeslag, vakantiegeld zichtbaar.",HRM
+Heropenen van incident 2343620 na meivakantie zonder contact.,HRM
+[Aanvullende gegevens] Bericht voor aanvullende gegevens wordt niet verstuurd via Onboarden,HRM
+[connector voorraadprofiel] Foutmelding 'onvoldoende voorraad' bij order vanuit webshop met profiel 12. Mogelijk veroorzaakt door popup vraag in AFAS.,ERP
+Inkooporderrapport verschijnt niet altijd automatisch na generatie of aanpassing.,ERP
+Nieuwe looncomponenten in cao Horeca verkeerd gejournaliseerd onder pensioenpremies.,HRM
+Tegel Profit testomgeving niet zichtbaar na inloggen in AFAS.,HRM
+Toegang tot tegels profit en insite ontbreekt voor een specifieke gebruiker.,HRM
+[Signaal] De bestemming is niet mogelijk bij organisatie/persoon,HRM
+[Cookies] Foutmelding bij openen inkoopfactuur in Insite: alleen bij specifieke gebruiker.,Algemeen
+[Weegave] Debiteurnaam ontbreekt bij grootboekkaart '8010 Omzet projecten' na toevoegen Deb./Cred. nummer.,ERP
+[Scanbox] E-facturen trainen leidt tot vervaldatum als factuurdatum in het systeem.,Algemeen
+Wijziging budgethouder instellingen van grootboekrekening naar verbijzondering en impact op processen.,ERP
+Groepering detailsectie van rapport inkooporder aanpassen,ERP
+"[Onboarden] Veld '(Z) Zakelijk mailadres' blijft leeg bij starten Onboarden, ondanks standaardinstelling.",HRM
+[Insite I publiceren] Automatisch koppelen van testomgeving aan insite uitschakelen?,Algemeen
+[Padindeling] Foutmelding bij opslaan van analyse in AFAS vanuit Excel.,ERP
+[Instantie]Einddatum pensioen kan niet aangepast worden door oude dienstverband gegevens.,HRM
+[klantportal] Geen beheerders meer,Algemeen
+[Loonschaal / Vrij veld] Toevoegen van een extra weergave kolom 'MAANDLOON' bij loonschaal import.,Algemeen
+"[Onboarden]Fout in onboarden workflow bij beëindigen lopend contract, blijft hangen in status.",HRM
+[testomgeving | autorisatie InSite] Toegang tot nieuwe testomgeving niet mogelijk ondanks autorisatie.,Algemeen
+[Saldi] Analyse van grootboekrekeningen #7400 en #7410 voor onverklaard saldo.,ERP
+"[Loonstrook] Afdrukken loonstrook geeft de foutmelding: ""Pipe is broken."".",HRM
+[Citrix] Netwerkschijf niet bereikbaar bij exporteren bestand in AFAS.,Algemeen
+[Loonaangifte] Stagiaire melding gaat af; De aangegeven Code aard arbeidsverhouding kan niet gebruikt worden bij de soort inkomstenverhouding 11 (Ambtenaar).,HRM
+"[Wens] Inkoopaanvraag voor dezelfde zzp'er met verschillende tarieven en projecten geeft foutmelding: 'Deze inkooporderregel overlapt met inkoopordernummer 00009, volgnummer 1 en mag niet aangemaakt worden.'",ERP
+"[Wens] Inkoopaanvraag voor dezelfde zzp'er met verschillende tarieven en projecten geeft foutmelding: 'Deze inkooporderregel overlapt met inkoopordernummer 00009, volgnummer 1 en mag niet aangemaakt worden.'",ERP
+[Gebruiker] Gebruiker rechten geven op Profit automatisch,Algemeen
+[Abonnement | Verkoopfactuur] BTW wordt berekend voor Belgische klant ondanks juiste instellingen.,ERP
+"[Onboarden] Onboarden workflow niet direct doorgezet na afhandeling loonheffing, vertraagd. | Conditoneel via geplande taak",HRM
+"[berichtsjabloon | afzender | mailserver | domeinnaam] Foutmelding bij het versturen van onboarding e-mails: ""550 5.7.26 Unauthenticated email from crh.com is not accepted door DMARC policy.""",Algemeen
+[Autorisatie] Nieuwe medewerker mist autorisatiegroepen obv functie,Algemeen
+"Export naar Excel opent niet automatisch, enkel opslaan venster verschijnt.",ERP
+[Cao MITT] Loonschalen CAO MITT (Mode- Interieur- Tapijt- en Textielindustrie) onderhouden vanuit AFAS,HRM
+Rapport 'Medewerker autorisatierol' verschijnt niet op pagina 'overzicht rapporten'.,Algemeen
+[PCC I Appconnector I Geblokkeerd] Foutmelding bij het vastleggen van berichten in Profit via Outlook: 6BBEDAC4198C486A979520B6186617CF.,Algemeen
+[Verlof] Handmatig extra verlof bijboeken en automatisch laten vervallen een jaar na toekenning,HRM
+"[Licentie] Het aantal medewerkers binnen je licentie, overstijgt het aantal waarvoor je licentie bezit. Je kunt hierdoor geen nieuwe medewerker toevoegen.",HRM
+[bankafschrift] Waar vind je de ingelezen periode van een bankafschrift? Zijn de cijfers de datum van de eerste mutatie?,ERP
+"[CBI Communicatieprofiel] Fouten in wachtrij communicatie service: ""Er zijn één of meerdere fouten opgetreden bij het uitvoeren van de taak 'Communicatieservice verzenden en ontvangen'.""",Algemeen
+"[WFI 08-05] SSL-certificaat voor domein www.werkenbijmedirisk.nl ontbreekt, verbinding niet veilig.",Algemeen
+[Indienst] Document 'Oproepkracht AOK FRQ' wordt niet gegenereerd bij indienstmelding.,HRM
+"Ontbrekende knop ""Voorbeeld"" in workflow ""Medewerker adres wijzigen"" voor gegevensverzameling.",Algemeen
+"[geplande taken verhogen] Limiet geplande taken ophogen, maximum aantal van 20 bereikt.",Algemeen
+"Fouten bij DNS aanvraag, exacte foutmelding onbekend.",Algemeen
+Crediteur in de VS verschijnt niet in betaalvoorstel door ontbrekende BIC.,ERP
+[Import | Csv] Import van bestand met 1.375 regels geeft 1.048.575 regels aan.,ERP
+[Gebruiker] Toegang geven aan nieuwe gebruiker voor AFAS InSite en inlogprocedure.,Algemeen
+[Agenda | exchange synchronisatie] Verlof wordt niet correct weergegeven in Outlook voor een medewerker.,Algemeen
+[Connectoren] Discrepantie in betekenis van CrId tussen management tool en AFAS Connect.,Algemeen
+[Workflow] De gekozen gebruiker kan niet vastgelegd worden als verantwoordelijke. Kies een andere gebruiker,Algemeen
+[Citrix] Vraag over de juiste Citrix versie 2405 en verbindingsproblemen.,Algemeen
+"[Blokkade] Geen reactie bij klikken op ""Financieel -> Debiteur -> Aanmaning"" in Profit.",Algemeen
+[SMS komt niet goed aan] Validatie-SMS voor digitaal ondertekenen komt niet aan op Bulgaars nummer.,Algemeen
+[Connector | Nmbrs Koppeling] Koppeling tussen Profit en Nmbrs werkt niet; e-mail naar gebruiker komt niet aan. OTP-request wordt niet uitgevoerd.,Algemeen
+[Berichtsjabloon I Afzender] Sjabloon aanpassen van de betaalspecificatie toont geen ex-collega's naam aan.,ERP
+Roepnaam in plaats van voornaam verzonden in cXML order via OCI-koppeling voor Manutan.,ERP
+[Autorisatie tool | groep vullen obv functie] Gebruiker kan niet worden toegevoegd aan gebruikersgroep in autorisatie tool.,Algemeen
+[iFrame] [OutSite] Foutmelding bij invullen frequentie in jobalert overlay: LoginSessionGuid mismatch,HRM
+[Autorisatie tool | gebruikersgroep vullen obv functie] Medewerker is nog niet in dienst voor betreffende functie,Algemeen
+"[InSite | Contractverlenging] Hoe zijn de actieknoppen ''Aanpassen'', ''Verlengen'', ''Opzeggen'' en ''Verwijderen'' te autoriseren in de Tonen pagina van de eigenschappen van het contract in InSite",ERP
+"[InSite | Contractverlenging] Hoe zijn de actieknoppen ''Aanpassen'', ''Verlengen'', ''Opzeggen'' en ''Verwijderen'' te autoriseren in de Tonen pagina van de eigenschappen van het contract in InSite",ERP
+[Rapport | Concepten] Verplaatste conceptregels verschijnen op het rapport concept declaraties zonder wijzigingen.,ERP
+"Beginbalans crediteur met negatief bedrag aanmaken geeft foutmelding: ""Het beschikbare bedrag vooruitbetaald op de crediteur is ontoereikend"".",ERP
+[Wens | weergave cursus] Weergavefout cursusoverzicht door filter op lege of oude aanmaakdatum.,Algemeen
+"[Algemene Ziekenhuizen (NVZ)] Stagevergoeding wordt bij iedereen toegepast of bij niemand toegepast, hoe alleen bij bepaalde medewerkers toepassen?",HRM
+[Excel | Office 365 | invoegtoepassing mist] Excel add-ins niet zichtbaar na installatie van PCC op nieuwe pc.,Algemeen
+[CSP | txt | security] Vraag over CSP en TXT,Algemeen
+[Wens | dossieritem logging] Logging van het openen van dossieritems in AFAS Profit en bijbehorende documentatie.,Algemeen
+[Test InSite URL] Geen test InSite beschikbaar voor koppeling in nieuwe testomgeving.,Algemeen
+"[Autorisatie | Insite] Erwin heeft alle rechten in Insite, maar ontvangt een foutmelding bij het inzien van projecten en beoordelen van facturen.",ERP
+[Onboarden] Inrichten van onboarding voor vrijwilligers zonder toegang tot InSite.,HRM
+[BTW] Factuurregel kan niet afgeboekt worden. Geen geldige btw-code gevonden.,ERP
+[BTW] Factuurregel kan niet afgeboekt worden. Geen geldige btw-code gevonden.,ERP
+Overzicht van digitaal ingevulde velden per leverancier en controleopties.,ERP
+"Bodemwaarde in Profit moet kleiner zijn dan aanschafwaarde, foutmelding verschijnt.",ERP
+[Gegevensverzameling / tabel] Zichtbaarheid van het volledige pad in gegevensverzameling in AFAS.,Algemeen
+[p6] [consultancy modus] Toegang tot consultancymodus voor verwijderen van collectieve verkooptarieven.,Algemeen
+"[Staartkosten] Staartkosten worden direct als resultaat gezien in projectprognose, maar zijn niet bijstelbaar.",ERP
+Beginbalans aanpassen lukt niet na splitsen van bankrekeningen op grootboekrekening.,ERP
+"[Afschrift I verwerken] Bankmutaties zijn niet zichtbaar na automatische verwerking, wat gebeurt er met het verwerkte saldo?",ERP
+"Creditfacturen verkeerd gejournaliseerd op 09-05-2025, foutmelding: ""Datum valt buiten de geselecteerde periode.""",ERP
+[Licentietelling] Wat voor invloed heeft het aanmaken van nieuwe werkgevers / BV's op mijn licentietelling?,HRM
+[export] [data timeout] Te veel tijd nodig om groot bestand van meer dan 27000 regels naar Excel te converteren. DataSet timeout: 180 seconds.,ERP
+"[Verkeerde boeking] Wijzigen van verkeerd geboekte creditnota in kostenboek, saldo is +€ 30.000,= in plaats van € 0,=.",ERP
+[Signaal] Uitvoeren signaal | De ingevulde waarde voor veld 'Organisatie/persoon' bestaat niet. Gebruik het zoekvenster om een waarde te selecteren,HRM
+Afschrijving van vaste activa tijdelijk stopzetten in de vaste activa module.,ERP
+"Contactgegevens samengevoegd, incidenten en wensen niet zichtbaar.",Algemeen
+[projecten] Samenstellingsartikel (explosie) kan niet geselecteerd worden in voorcalculatie.,ERP
+"[wens[ Navigeren tussen rapporten sluit niet correct af, gaat terug naar afbeelding 1.",ERP
+[Familie] Aanpassen van de workflow om extra opties voor contactpersonen toe te voegen.,HRM
+[Verlof] Aanpassing verlofprioriteit leidt tot waarschuwing over ongewenste gevolgen voor verlofsaldi.,HRM
+[Analyse I voorraadplanning] Overzicht toekomstige voorraad per artikel en datum/week in Excel.,ERP
+"[Tellers] Foutmelding bij genereren concept factuur: autonummering lengte aangepast, maar fout blijft. De waarde 999 valt buiten de opgegeven grenzen van de reeks (001 t/m )",ERP
+"[weergave] Functie van contactpersoon zichtbaar maken in Pocket App, maar niet mogelijk.",Algemeen
+"Jaaroverschrijdende correctie voor pensioenfonds na sluiten dienstverband, effect en consequenties?",HRM
+"Geen gevolgde cursussen zichtbaar in ""mijn cursussen"" na eerdere deelname.",Algemeen
+[Medewerker] Onvindbare medewerkers,HRM
+"Workflow bereikt hoofdverantwoordelijke niet bij vacature, hoe kan dit?",HRM
+Aanpassen van de volgorde van documenten in de onboarding workflow.,HRM
+[Vervaldatum I boekstukdatum] Vervaltermijn van inkoopfactuur wordt berekend op boekingsdatum in plaats van factuurdatum.,ERP
+Acties die geautoriseerd zijn onder Medewerker MSS in de autorisatie tool kunnen ook voor jezelf (ESS) gebruikt worden,Algemeen
+[Export Excel] Vraag over autorisatie voor exporteren van weergaves in Insite. Geldt de autorisatie uit Profit ook hier?,Algemeen
+[Totalizer ] Totaliseren werkt niet op kolom aanschafwaarde in vaste activa.,ERP
+"[Vrij veld I getconnector] Veld toegevoegd in gegevensverzameling, maar niet zichtbaar in AFAS Connect.",Algemeen
+[Geplande taken] Maximaal aantal van 20 geplande taken bereikt | ophogen geplande taken,HRM
+[facturatiecockpit abonnementen] Verkoopfacturen genereren uit abonnement module mislukt door ontbrekende factuurdatum of btw-code.,ERP
+[facturatiecockpit abonnementen] Verkoopfacturen genereren uit abonnement module mislukt door ontbrekende factuurdatum of btw-code.,ERP
+[Scan en herken] Geen tekst- of bedragveld selecteren in PDF bij e-factuur bewerking.,ERP
+Foutmelding bij inlezen doorberekeningen door niet-verwijzing naar Veld 9 (credit).,ERP
+[Onboarden] Weergave 'Te onboarden sollicitanten' en 'Onboarden workflows',HRM
+[Onboarden] Onboarding sollicitant verschijnt niet in de weergave te onboarden sollicitanten.,HRM
+[Workflow] Gebruikers(groep) op basis van bestemming wordt niet bijgewerkt bij wijzigen conditie,Algemeen
+[Weergave I logging] Inzien wie en wanneer een contactpersoon is aangemaakt in de log.,Algemeen
+[Dossieritem] Dossier op meerdere bestemmingen vastleggen | Medewerker + Verkooprelatie,Algemeen
+"[powerBI] Verbinding maken met KVMC vanuit PowerBI lukt niet, foutmelding onbekend.",Algemeen
+Unexpected agency foutmelding bij registreren onboarden,HRM
+"[citrix] Zwart scherm bij opstarten van Profit voor specifieke gebruiker, geen foutmelding.",Algemeen
+[parameter] [hoog][laag] Premie Aof aanpassen,HRM
+[Rooster] Rooster wijzigen geeft de melding: Het rooster kan niet worden aangepast vanwege de volgende reden(en): Het rooster bevat meerdere roosterblokken op één dag.'.,HRM
+[berichtsjabloon | talen | tags | subsjabloon | mollie-koppeling payment link] Aanpassen berichtsjabloon in AFAS levert andere tekst in e-mail dan in editor.,Algemeen
+"[Vakantietoeslag] Vakantiegeld ontbreekt op loonstrook van medewerker, uurloner naar vaste medewerker",HRM
+[Pocket]Zichtbaarheid van vrij type dossieritem in de Pocket App instellen.,Algemeen
+Lid van gebruikersgroep SJG-FA+ kan geen facturen toevoegen aan activadossier.,ERP
+[Autorisatie] Medewerker krijgt 'No data to be shown' bij contractverlenging in InSite.,HRM
+Foutmelding bij handmatig boeken in P1 2026: teller nog niet ingesteld.,ERP
+[FiInvoice / FiEntries] Foutmelding 500 bij het ophalen van een inkoopfactuur via AFAS Connect: Object reference not set to an instance of an object.,ERP
+"Toevoegen van BTW-codering met percentage 0,00 in SpendCloud zonder mutatie.",ERP
+[Solliciteren] Werking actie Sollicitant en Portaltoegang bijwerken,HRM
+[btw-tariefgroep] Foutmelding bij aanmaken termijn met BTW verlegd: Subquery returned more than 1 value.,ERP
+[Vrij veld] Vrije velden bij aanvullende gegevens zijn niet zichtbaar in Profit.,HRM
+[Jaaroverschrijdend twk] Correctie 30% regeling voor medewerker in 2022 zonder gegevens vanuit oude salarispakket,HRM
+[Koppeling] Medewerker kan niet als beoordelaar gekozen worden bij inkoopfacturen.,ERP
+[Power BI] Foutmelding bij PowerBI-koppeling: 3 query's geblokkeerd door error 404.,Algemeen
+[Citrix] Profit 5 tegel start op maar sluit direct zonder foutmelding.,Algemeen
+"[Verlof][2344524] Foutmelding bij mutaties van uitdienstgetreden medewerkers over negatief saldo. Verlofboeking overschrijd verlofsaldo, negatief verlof niet toegestaan",HRM
+Medewerker werkt door na AOW-gerechtigde leeftijd | meerdere dienstverbanden,HRM
+Geboortedatum bij aanmaken familielid in tabblad 'Familie' blijft verplicht ondanks instellingen,HRM
+[Import] Verwijderen van een dubbele salarisjournaalimport in de administratie-instellingen.,HRM
+"UpdateConnector KnSalesRelationOrg ondersteunt geen velden onder ""Accountancy verantwoordelijkheden"".",Algemeen
+"Taak voor klaarzetten laptop gaat naar iedereen van ICT, niet alleen naar de ICT afdeling van de betreffende school",Algemeen
+[Weergave] Onverwachte fout bij openen salariscomponenten in salarisverwerkingsplan,HRM
+Wijzigen van een periode tabel van kwartaal naar maand in Financieel.,ERP
+"Onboarden van sollicitant geeft foutmelding: ""De bestemming komt niet overeen met de inrichting van het type dossieritem.""",HRM
+[Journaalpost wijzigen | memo boeking] Verwijderen van memoriaalboeking mislukt: 'dossieritem bevindt zich nog in een workflow.',ERP
+[Conditie] Controle mogelijkheid bij aanmaken betermelden/ziekmelden | WENS,HRM
+"[Mollie] Betalingsverschil bij Mollie, hoe werkt dit",ERP
+[Autorisatie] Bestaande gebruiker toevoegen aan groep PR-152 Medewerker lukt niet via autorisatietool.,Algemeen
+[Bestaand contactpersoon] Samenvoegen van contactpersonen in AFAS klantportal voor toegang met Hutten mailadres.,Algemeen
+[Re-integratieverslag] AFAS document Re-integratieverslag mist UWV invultabellen | Plan van aanpak,HRM
+[Excel I Datum] Importeren van uren via CSV met ongewijzigde velden en datumformaat.,ERP
+"Afzender van inkoopaanvraag is onjuist bij conditionele actie, verwacht gebruiker.",Algemeen
+[Payroll Auditor] Vraag over de werking van de Payroll Auditor bij afwijkend percentage BT 100.009.413 Audit: percentage BT via beschikking lager dan berekend.,HRM
+Toevoegen van parameter 'Berekenen' en vinden van salaristabel 135.230.717.,HRM
+Abonnementsmutatie Extra (test)omgevingen,Algemeen
+"[Zoekweergave I Insite I Andere regels] Selecteren van artikelgroepen in inkoopaanvraag niet mogelijk, alleen artikelgroep 521 zichtbaar.",Algemeen
+"[Zoekweergave I Insite I Andere regels] Selecteren van artikelgroepen in inkoopaanvraag niet mogelijk, alleen artikelgroep 521 zichtbaar.",Algemeen
+[Wens] Vacatures aangemaakt vanuit verschillende documentsjablonen tonen in één overzichtspagina,HRM
+[Transitievergoeding] Transitievergoeding workflow start niet bij uitdiensttreding met rede: Opzegging/ontslag door de werkgever binnen de proeftijd door werkgever,HRM
+[Rapport I Script] Nulregels op pakbon onderdrukken zodat ze niet zichtbaar zijn op de factuur.,ERP
+"Salarisberekening toont splitsing in Salaris en Salaris (Uit uren verlof), waar komt dit vandaan?",HRM
+"[inrichting mailserver] Mailadres voor gebruiker aanmaken in AFAS werkt niet, controleer mailserverinstellingen.",Algemeen
+[Loonmutatie] Looncomponent voorschot verrekening kan niet geboekt worden: mutaties via boekingsprogramma niet toegestaan,HRM
+Overzichtspagina aanmaken voor niet geblokkeerde organisatorische eenheden.,Algemeen
+[Import] Foutmelding: De ingevoegde waarde voor veld X is van een verkeerd type of te lang,HRM
+[Termijnfactuur] Koppelen factuur aan termijnschema zonder crediteren van factuur.,ERP
+"[Werkgever][Stop] Verloning stopzetten voor werkgever in AFAS per 1-5, geen salarisberekening of loonaangifte.",HRM
+"[Actuele gegevens][Weergave] Contractverlenging zichtbaar in Afas, maar einddatum medewerkerslijst blijft op de eerste regel staan",HRM
+[klantportal[Passkey] Gebruik AFAS Pocket-app op werkstation met passkey en inloggen in de klantportal.,Algemeen
+Knop 'Vastleggen' ontbreekt in Outlook en 'PROFIT DOCUMENT' ontbreekt in Word.,Algemeen
+[Procuratie] Afwijkingen in workflow goedkeuring inkoopfactuur met meerdere beoordelaars. Workflow komt niet bij volgende beoordelaar.,ERP
+"[Grijs veld I management tool] Geen mogelijkheid om taal te wijzigen bij verkooprelatie, optie is disabled.",Algemeen
+[DKIM] Aanvraag voor DKIM-domain keys bij afas.nl vanwege DMARC-vereisten.,Algemeen
+"[Power BI I 404] Foutmelding bij PowerBI: velden niet gevuld, onduidelijk welke velden ontbreken.",Algemeen
+[tabbladen onderhouden | Management tool ] Verdwenen standaardtabbladen in de managementtool en insite bij verkooprelatie.,Algemeen
+"Intercompany facturen blijven geblokkeerd, verzoek om automatisch deblokkeren voor betaling.",ERP
+[Inkoopfacturen | wens] Een overzicht krijgen van inkoopfacturen en door wie deze beoordeeld moeten worden in de workflow in InSite of in Profit.,ERP
+[afsluiten plaatsing | beoordelen extern niet zichtbaar | ter beoordeling extern status workflow] Workflow Declaratie Nacalculatie (Xstate) wordt niet toegewezen aan gebruikers zonder feedback.,Algemeen
+Onboarden vanaf stamkaart HRM pagina niet zichtbaar in bannerconfiguratie.,HRM
+[Verlof] Aantal uren in verlofaanvraag is niet aan te passen,HRM
+[Digitaal ondertekenen] Datum ondertekening document komt niet overeen met SignServiceLog.,HRM
+Foutmelding 48233: personeelsnummer zonder naam in betaalopdrachten toont onvoldoende informatie.,ERP
+Verwijderen van de knop 'Verlengen' voor budgethouders in AFAS contractmiddelen.,ERP
+Automatische verlenging salarisverwerkingsplannen faalt door volle periodetabel. Klopt deze beredenering?,HRM
+"Mutaties blijven langer hangen in Profit, waardoor Insite trager werkt.",HRM
+[insite I indeling] Factuur weergave in InSite aanpassen naar de rechterkant van het scherm.,ERP
+[P6] Uitzetten van bevestiging bij productgroepaanvragen in Profit 6: De artikelen zijn toegevoegd aan je inkoopaanvraag,ERP
+"Trage prestaties in Insite en Profit, vooral bij sitebeheer.",Algemeen
+Onjuiste veldtoewijzing NEW_ITEM_MANUFACTCODE in OCI-koppeling naar Profit.,ERP
+[WENS][taken bij uitdienst]Overdracht openstaande taken van medewerkers naar nieuwe leidinggevende mislukt.,HRM
+Foutmelding bij openen pagina op InSite: STATUS_ACCESS_VIOLATION,ERP
+[rooster][uren per week]Verschil in salarisberekening door roosterinstelling en ingangsdatum bij medewerkers.,HRM
+"Foutmelding bij openen OCI-koppelingen Mediq, beschrijving onbekend.",Algemeen
+[aanpassen][worklfow]Onboarding nieuwe medewerker kan niet worden voltooid door onvolledig adres; wijziging ontbreekt in Insite.,HRM
+"Verlaagde pensioenspremie bij zorgverlof opname, terwijl dit verlof 100% doorbetaald is.",HRM
+Leidinggevende in Onboarding-module wordt niet juist gekozen voor sollicitant.,HRM
+[power BI I vrij] Mogelijkheid om BI-model te maken op basis van vrije dossieritems en vrij velden.,Algemeen
+[control] Abonnement verhoging naar 250 medewerkers niet zichtbaar door verzuim huidige manager. Medewerkers kunnen niet insite vanwege te weinig licenties.,Algemeen
+Activering van Prijzen incl. BTW en gevolgen voor prijzen en processen.,ERP
+[landcode vk I uk] Geen landcode voor het Verenigd Koninkrijk bij invoeren verkooprelatie.,ERP
+Mails over goedkeuring verlofverzoeken worden onterecht naar medewerkers gestuurd.,HRM
+[Jonas] Vraag over de mogelijkheden van samenvatten d.m.v. Jonas in de workflow en de knop 'Vat deze pagina samen',Algemeen
+[overzicht][insite]Waarden ophalen uit de onboarding flow voor overzicht in portal.,HRM
+"Mollie-bankafschrift verwerken lukt niet; foutmelding: ‘Deze factuur is in een andere, nog openstaande sessie afgeletterd door gebruiker 91121.admin’.",ERP
+"[iso] Aanleveren ""Verklaring toepasselijkheid ISO27001"" als apart document.",Algemeen
+"[log] Informatie over de toevoeging van gebruikersgroep ""Alle administraties"" in autorisatietool.",Algemeen
+[Foutieve Herinneringsmail] [OutSite] Incompleet DNS-configuratie voor aangevraagde OutSite; actie vereist binnen 60 dagen.,Algemeen
+[EnvironmentId and/or SiteId is empty] Insite kan niet geopend worden. Zie melding.,Algemeen
+[EnvironmentId and/or SiteId is empty] Insite kan niet geopend worden. Zie melding.,Algemeen

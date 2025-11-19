@@ -40,7 +40,7 @@
   <div class="tekst1">
     <p>Welk antwoord is het beste beginantwoord?</p>
 
-    <form action="{{ url_for('opslaan_incident', nummer=nummer) }}" method="POST">
+    <form action="{{ url_for('opslaan_erp', nummer=nummer) }}" method="POST">
     <input type="hidden" name="index" value="{{ vraag.Index }}">
       <input type="hidden" name="onderwerp" value="{{ vraag.Onderwerp }}">
       <input type="hidden" name="toelichting" value="{{ vraag.Toelichting }}">

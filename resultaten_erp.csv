@@ -1,0 +1,361 @@
+Index,Incident,Onderwerp,Toelichting,Optie 1,Optie 2,Model 1,Model 2,Gekozen optie
+95,1,Inlezen van CAMT .053 bestanden met overlap in mutaties vanaf 01-10-2024.,"Probleembeschrijving: “Wij proberen de bank in te lezen met CAMT .053 bestanden. Echter zit er een verschil in met twee mutaties overlap. Geprobeerd de bestanden aan te passen, maar dan wordt het een ongeldig bestand… Graag de volgende bestanden vanaf 01-10-2024 inlezen.” Aanvullende details: - Kun je precies uitleggen waar de overlap in mutaties zit? - in bovenstaande periode - Speelt dit probleem bij het inlezen van alle bestanden of slechts een specifiek bestand? - alle - Heb je gecontroleerd of er wijzigingen zijn geweest in de CAMT .053 specificatie of instellingen binnen AFAS sinds 01-10-2024? - ja","Dank voor de toelichting. Op basis van wat je beschrijft (vanaf 01‑10‑2024 in elke CAMT.053 file twee overlappende mutaties, handmatig aanpassen maakt het bestand ongeldig) is dit vrijwel zeker een “statement overlap” door hoe de bank de dagafschriften snijdt, in combinatie met de manier waarop AFAS de uniciteit van mutaties bepaalt.
+
+Waar de overlap in mutaties meestal zit
+- In CAMT.053 zitten mutaties onder Document > Stmt > Ntry.
+- Bij een overlap herhaalt de bank doorgaans de laatste 1–2 Ntry’s van bestand A als de eerste 1–2 Ntry’s in bestand B.
+- Technisch herken je dat aan gelijke referenties:
+  - Ntry/AcctSvcrRef (service reference) of Ntry/NtryRef zijn identiek in beide bestanden, en vaak ook bedrag, omschrijving en tegenrekening.
+- Je ziet vaak óók overlap in de periodes:
+  - Document > Stmt > FrToDt heeft een ToDt in bestand A die gelijk is aan of later dan de FrDt in bestand B, waardoor de tijdvakken elkaar kruisen.
+- Soms komt dit door een wijziging bij de bank: switch van camt.053 variant of aanpassing in cut‑off (bijv. boekingsdatum versus valutadatum).
+
+Antwoorden op je vragen
+- Waar zit de overlap precies: zeer waarschijnlijk in de eerste twee Ntry’s van elk bestand na 01‑10‑2024 die gelijk zijn aan de laatste twee Ntry’s van het voorafgaande bestand. Dit kun je bevestigen door Ntry/AcctSvcrRef of Ntry/NtryRef tussen twee opeenvolgende bestanden te vergelijken.
+- Speelt het bij alle bestanden: ja, dat past bij een structurele wijziging aan bankzijde (dagafsluiting) waardoor sinds 01‑10 elke nieuwe file twee mutaties van de vorige dag herhaalt.
+- Wijzigingen in CAMT.053 of AFAS: zelfs als de AFAS‑instellingen niet veranderd zijn, kan een bankwijziging (bijv. camt.053.001.02 naar .04 of andere populatie van Ntry‑referenties/boekingsdatum) dit gedrag veroorzaken. AFAS kan dan mutaties niet meer als uniek herkennen, afhankelijk van jouw importinstellingen.
+
+Wat je nu het beste doet om vanaf 01‑10‑2024 succesvol in te lezen
+1) Controleer welke unieke referentie je bank aanlevert
+- Open twee opeenvolgende bestanden (bijv. 2024‑10‑01 en 2024‑10‑02).
+- Vergelijk voor de overlappende mutaties:
+  - Ntry/AcctSvcrRef
+  - Ntry/NtryRef
+  - RmtInf/Strd/CdtrRefInf/Ref of RmtInf/Ustrd
+  - BkTxCd
+- Als AcctSvcrRef of NtryRef identiek is tussen bestanden, kun je daarop dedupliceren.
+
+2) Pas de AFAS‑bankimportinstellingen aan op duplicaatcontrole
+- Zet de controle op dubbele mutaties bij CAMT‑import op “bankreferentie” als die aanwezig is:
+  - Gebruik Ntry/AcctSvcrRef of Ntry/NtryRef als primaire sleutel voor uniciteit.
+- Als je bank geen bruikbare referentie levert, kies een robuuste combinatie:
+  - Bedrag + boekingsdatum (Stmt/Ntry/BookgDt) + tegenrekening + omschrijving + EndToEndId (als aanwezig).
+- Let op het datumveld:
+  - Gebruik BookgDt in plaats van ValDt voor de mutatiedatum als de overlap lijkt te ontstaan door valutadatum-verschuivingen.
+
+3) Importeer opnieuw vanaf 01‑10‑2024 met deduplicatie actief
+- Start de import met de oudste file van 01‑10 en werk chronologisch.
+- AFAS zal overlappende mutaties overslaan wanneer de duplicaatcontrole goed staat.
+- Forceer geen handmatige XML‑wijzigingen; kleine aanpassingen maken het bestand schema‑ongeldig en kunnen digitale handtekeningen breken.
+
+4) Als het toch blijft misgaan
+- Deel twee opeenvolgende CAMT.053 bestanden (bijv. 2024‑10‑01 en 2024‑10‑02), of in elk geval:
+  - De Document/Stmt/Id
+  - Stmt/SeqNb
+  - Stmt/FrToDt en Stmt/CreDtTm
+  - De volledige Ntry‑blokken van de twee overlappende mutaties in beide files
+- Geef door: banknaam, CAMT.053 variant (bijv. camt.053.001.02 of .04) en jullie AFAS‑versie en importinstellingen.
+- Dan kunnen we exact bevestigen welke velden voor deduplicatie gebruikt moeten worden of of er een mapping‑aanpassing nodig is.
+
+Veelvoorkomende oorzaken sinds 01‑10‑2024
+- Bank heeft cutoff-tijd of statement slicing aangepast: de laatste mutaties van dag D worden ook in dag D+1 opgenomen.
+- Variantwissel of gewijzigde populatie van Ntry/AcctSvcrRef: AFAS ziet de referentie niet meer als uniek en importeert dubbel.
+- Datumveldwijziging: bestanden leveren ValDt waar voorheen BookgDt werd gebruikt, met overlappende periodes.
+
+Wat we voor je kunnen doen
+- Als je de bestanden aanlevert, kunnen we de overlap exact aanwijzen en desgewenst de juiste AFAS‑instellingen adviseren zodat de import vanaf 01‑10‑2024 zonder dubbele mutaties verloopt.
+- Eventueel kunnen we een pre‑import filter aanreiken dat XML‑valide blijft en overlappende Ntry’s op basis van referentie uitsluit, maar meestal is aanpassen van de AFAS‑duplicaatcontrole voldoende.
+
+Laat je twee opeenvolgende bestanden of de gevraagde XML‑fragmenten even zien? Dan zorgen we dat de import vanaf 01‑10‑2024 goed gaat en lichten we toe welke referentie AFAS moet hanteren om de overlap te voorkomen.","Hieronder vind je:
+
+1. Een korte uitleg waardoor de overlap in mutaties meestal ontstaat bij CAMT.053-bestanden.
+2. Concreet hoe je in de XML kunt controleren wáár de overlap precies zit.
+3. Praktische stappen om de bestanden vanaf 01-10-2024 toch correct in te lezen in AFAS zonder het bestand ongeldig te maken.
+
+──────────────────────────────────
+1. Waarom ontstaat de overlap?
+──────────────────────────────────
+• Veel banken (o.a. ING, Rabobank, ABN AMRO) leveren CAMT.053 standaard “cumulatief per boekdatum”.  
+  – Elke nieuwe statement bevat dan óók alle mutaties die al in eerdere dag-statements zijn gemeld zolang de boekingsdatum in de periode valt.  
+  – Het verschil zit vaak in het attribuut `<Sts>` of in de volgnummer-velden `<Stmt><Id>`/`<Seq>`.  
+• Importlogica in AFAS kijkt primair naar (a) Grootboekstuknummer, (b) Bankafschrift-volgnummer en (c) Entry-referentie (`<Ntry><NtryRef>`).  
+  – Als twee bestanden identieke `<NtryRef>`-waarden bevatten maar een ander afschriftnummer hebben, ziet AFAS ze als “nieuwe” regels → overlap/dubbel.
+
+──────────────────────────────────
+2. Zo lokaliseer je de overlap in de XML
+──────────────────────────────────
+1. Open de twee opeenvolgende CAMT.053’s (bijv. statement Id 20241002 en 20241003).  
+2. Filter op `<Ntry>`-blokken met gelijke:  
+   • `<NtryRef>` óf `<AcctSvcrRef>`  
+   • Optioneel: `<Refs><TxId>` (End-to-End)  
+3. Noteer bij welke transacties dezelfde combinatie voorkomt.  
+   – Meestal gaat het om slechts één of twee transacties rondom 00:00 (bijv. pin-batch of creditcard clearing).  
+   – Zie je ook identieke `<BookgDt>` en `<ValDt>` maar ander `<Seq>`, dan is het inderdaad een cumulatieve aanlevering.
+
+──────────────────────────────────
+3. Bestanden inlezen zonder overlap
+──────────────────────────────────
+Optie A. Import-instellingen in AFAS tweaken  
+1. Ga naar: Financieel → Grootboek → Instellingen → Bankafschriften.  
+2. Zet “Controle op dubbele regel” op “Referentie bank (NtryRef/EndToEndId)”.  
+3. Laat “Controle datum + bedrag” uit, zodat AFAS alleen de unieke referentie als harde sleutel gebruikt.  
+4. Importeer daarna de bestanden in chronologische volgorde (01-10-2024 → …).
+
+Optie B. CAMT.053 splitten (zonder XML ongeldig te maken)  
+1. Kopieer het originele bestand.  
+2. Verwijder in de kopie de overlappende `<Ntry>`-blokken. Let op:  
+   – Pas óók de totalen in `<CtrlSum>` en `<NbOfNtries>` aan.  
+   – Houd namespaces, header en XML-validatie intact.  
+3. Valideer met XSD (ISO 20022 pain.001/camt.053 schema of via bankportaal).  
+4. Importeer het opgeschoonde bestand.
+
+Optie C. Nieuwe bankrun laten genereren  
+• De meeste banken kunnen een “non-cumulative” run genereren (alleen nieuwe mutaties).  
+• Vraag de helpdesk om CAMT.053 “intraday” of “sequencer” instelling.  
+  – ING: Servicecode 000031.  
+  – Rabobank: StatementDeliveryMode = 3 (“incremental”).  
+  – ABN: veld `ReportIndicator` op “X”.
+
+──────────────────────────────────
+4. Wat is er sinds 01-10-2024 in de CAMT-specificatie gewijzigd?
+──────────────────────────────────
+• ISO 20022 release 2024Q4 bevat alleen verduidelijkingen; tags voor `<NtryRef>` en `<AcctSvcrRef>` bleven ongewijzigd.  
+• AFAS (Profit 2024.05) heeft geen mapping-wijziging gedaan op CAMT.053.  
+  – Alleen validatie op valuta (ISO 4217) is aangescherpt.  
+
+Kortom: het probleem zit vermoedelijk niet in de specificatie, maar in de manier waarop de bank de afschrift-series samenstelt én hoe AFAS duplicaatcontrole toepast.
+
+──────────────────────────────────
+Actieplan samengevat
+──────────────────────────────────
+1. Controleer in één paar bestanden waar de overlappende `<Ntry>`-blokken zitten.  
+2. Schakel in AFAS duplicaatcontrole om op bankreferentie óf pas de bestanden aan zoals hierboven.  
+3. Importeer opnieuw vanaf 01-10-2024.  
+4. (Optioneel) Laat de bank voortaan “non-cumulative” CAMT.053 aanleveren om dubbelwerk te voorkomen.
+
+Mocht je de twee concrete XML’s willen laten nalopen (alleen de headers + overlap-entries), stuur ze dan in een ticket of via een beveiligd kanaal; dan kan ik exact aanwijzen welke entries dubbel zijn en welk volgnummer AFAS verwacht.",GPT-5,GPT-o3,Optie B
+22,2,Import itemcode inkooprelatie,,"Kunt u iets meer context geven? Bijvoorbeeld in welk systeem u de inkooprelatie wilt vullen (Exact Online, AFAS, Business Central, SAP, enz.), en of het gaat om nieuwe koppelingen of het bijwerken van bestaande? Dan kan ik u een gericht importtemplate of stappenplan geven.
+
+Algemeen stappenplan voor het importeren van leveranciers-artikelcodes (inkooprelatie):
+- Bepaal het gewenste datamodel: per combinatie van leverancier en intern artikel één regel, inclusief prijs- en logistieke gegevens.
+- Verzamel de sleutelvelden:
+  - Leverancier-ID of -code (inkooprelatie)
+  - Intern artikelnummer of artikel-ID
+- Maak een importbestand (CSV/Excel) met minimaal:
+  - LeverancierID
+  - ArtikelID (intern) of ArtikelCode
+  - LeveranciersArtikelcode
+  - LeveranciersOmschrijving (optioneel)
+  - Inkoopprijs (excl. btw)
+  - Valuta (bijv. EUR, USD)
+  - Eenheid (bijv. ST, PK)
+  - Prijs per (factor, indien prijs per verpakking)
+  - Minimum bestelhoeveelheid (MOQ)
+  - Levertijd (dagen)
+  - Voorkeursleverancier (ja/nee)
+  - Geldig vanaf / Geldig tot (optioneel)
+  - EAN/UPC en/of MPN (optioneel)
+  - Staffels: bijv. Staffelk(aantal)_1, Staffelk(prijs)_1, Staffelk(aantal)_2, etc. (indien ondersteund)
+- Valideer het bestand:
+  - Combinatie LeverancierID + ArtikelID is uniek.
+  - LeveranciersArtikelcode gevuld en uniek binnen dezelfde leverancier.
+  - Datatypen correct (prijs numeriek, valuta geldige code, datumformaat YYYY-MM-DD).
+  - Eenheden komen overeen met inkoop-/verpakkingseenheid van het artikel.
+  - Geen verborgen spaties of niet-ASCII tekens; bewaar CSV in UTF-8 en let op scheidingsteken (vaak ; in NL).
+  - Let op leidende nullen in codes (formatteer als tekst in Excel).
+- Importeer via de datamigratie/Import-functie van uw ERP:
+  - Kies entiteit “Leverancier-artikel” of “Inkooprelatie per artikel”.
+  - Map kolommen uit uw bestand naar de velden in het systeem.
+  - Gebruik waar mogelijk “upsert” (bijwerken als bestaat, anders toevoegen) of een Actie-kolom (Add/Update/Delete).
+- Controleer na import:
+  - Random steekproef: prijs, eenheid, MOQ, levertijd en leverancierscode kloppen.
+  - Rapportage op dubbele leverancierscodes, ontbrekende leveranciers of artikelen.
+  - Stel “voorkeursleverancier” per artikel in indien nodig.
+- Herhaal voor staffelprijzen of geldigheidsperiodes als uw systeem dat via aparte tabellen/regels vereist.
+
+Veelvoorkomende valkuilen:
+- Excel verwijdert leidende nullen (artikel- of leverancierscodes veranderen).
+- Verkeerde valuta of prijs per verpakking (factor niet toegepast).
+- Staffelprijzen verkeerd gemodelleerd (vereist meerdere regels of aparte tabel).
+- Meerdere leveranciers voor één artikel: vergeet “voorkeursleverancier” te markeren.
+- Duplicaten: dezelfde LeveranciersArtikelcode voor verschillende interne artikelen bij dezelfde leverancier.
+
+Voorbeeld kolomkoppen (CSV):
+LeverancierID;ArtikelCode;LeveranciersArtikelcode;Inkoopprijs;Valuta;Eenheid;MOQ;LevertijdDagen;Voorkeursleverancier;GeldigVanaf;GeldigTot
+
+Als u aangeeft:
+- welk pakket u gebruikt,
+- of u een standaard importwizard of API inzet,
+- en welke velden u wilt beheren (prijzen, staffels, eenheden, MPN/EAN),
+dan lever ik een passend template en de exacte importstappen voor uw omgeving.","Importeren van een Itemcode in een Inkooprelatie (leveranciers-artikelcode)
+
+1. Kies het juiste import-type  
+   In Exact Globe/Exact Online heet de import vaak “Artikel-Relatie”, “Item-Supplier” of “Artikelen – Inkooprelaties”. Een regel staat altijd voor de combinatie:
+   • Artikel (Item)  
+   • Relatie (Leverancier)  
+   • Leveranciers-artikelcode (SupplierItemCode)
+
+2. Minimale velden in het bestand  
+   ArtikelCode;RelatieCode;LeveranciersArtikelCode  
+   Voor sommige omgevingen zijn ook KostPrijseenheid of Valuta verplicht, maar voor uitsluitend de artikelcode volstaan de drie velden hierboven.
+
+3. Voorbeeld-CSV  
+   ```
+   ItemCode;Account;SupplierItemCode
+   1000;3000;ABC-1000
+   1001;3000;ABC-1001
+   1000;4000;XYZ-1000
+   ```
+   • Scheidingsteken: “;” (ANSI of UTF-8 zonder BOM).  
+   • Géén kopregel nodig als u via de ‘standaard lay-out’ importeert.  
+   • In Excel opslaan als CSV (gescheiden door puntkomma).
+
+4. Import uitvoeren  
+   Exact Globe:  
+   Menubalk > Bestand > Importeren > Art./Relatie (of Batch > Datacard-import > Item-Supplier).  
+   Exact Online:  
+   Stamgegevens > Items > Import/Export > Import Inkooprelaties.
+
+   Stappen:  
+   a. Selecteer het CSV-bestand.  
+   b. Kies “Toevoegen/Bijwerken”. Zo overschrijft u bestaande regels indien de combinatie artikel + leverancier al bestaat.  
+   c. Voer desgewenst eerst “Test import” uit.  
+
+5. Veel-voorkomende meldingen / oplossingen  
+   • “Article not found”: controleer spaties of hoofd-/kleine letters in de ItemCode.  
+   • “Account not found”: de leverancier moet in de administratie aanwezig én type ‘Crediteur’ zijn.  
+   • “Length exceeded (50)”: leverancier-artikelcode mag max. 50 (Exact Online) of 40 (Globe) karakters bevatten.  
+   • Lege SupplierItemCode in het bestand ⇒ bestaande waarde wordt overschreven met leeg (wissen).
+
+6. Meer kolommen nodig?  
+   Voeg optioneel velden toe voor o.a.:
+   • PurchasePrice  
+   • MinimumOrderQty  
+   • LeadTime  
+   • PurchaseUnit / Factor  
+   • Currency
+
+   Structuur blijft één regel per artikel-leverancier combinatie.
+
+7. Via API (Data Hub / REST)  
+   POST /v1/{division}/purchaseItemSuppliers  
+   ```
+   {
+     ""ItemCode"": ""1000"",
+     ""SupplierAccount"": ""3000"",
+     ""SupplierItemCode"": ""ABC-1000""
+   }
+   ```
+   Met de PATCH-methode kunt u alleen de SupplierItemCode bijwerken.
+
+8. Tips  
+   • Maak vóór een bulkimport altijd een back-up of exporteer bestaande inkooprelaties.  
+   • Test met 1–2 regels om zeker te zijn van de mapping en het scheidingsteken.  
+   • Houd rekening met hoofdletter-gevoeligheid in sommige omgevingen.  
+
+Volgt u bovenstaande stappen dan wordt de leveranciers-artikelcode (Itemcode in de inkooprelatie) correct geïmporteerd en bijgewerkt.",GPT-5,GPT-o3,Optie A
+240,3,Samenstelling C-MILL Miditower-63136_C vraagt voorraadbehoefte zonder open order.,Probleembeschrijving: Wanneer wij een productievoorstel doen komt er een samenstelling naar voren die voorraad behoefte opvraagt welk niet in een order staat het gaat om samentelling : C-MILL Miditower-63136_C Van deze samenstelling staan er verder geen orders open Aanvullende details: - Kun je precies aangeven welke stappen je doorloopt om het productievoorstel te maken? - Ordermanagement --> Productie --> productieorder - Sinds wanneer speelt dit probleem en werkte het eerder wel correct? - vandaag - Zijn er specifieke wijzigingen in de instellingen of infrastructuur geweest sinds dit probleem zich voordoet? - nee,"Dank voor de melding en de aanvullende informatie. Een productievoorstel (MRP-/MPS- run) kan ook behoefte genereren voor een samenstelling wanneer er géén open verkoop- of productieorders zijn. Meestal komt dat door één van de volgende oorzaken:
+
+1. Veiligheids- of minimumvoorraad  
+   • In de artikelkaart (tabblad Voorraad / Planning) staat een Veiligheidsvoorraad of Minimumvoorraad > 0.  
+   • MRP vult het verschil tussen de actuele vrije voorraad en deze drempel aan.
+
+2. Forecast / prognoses  
+   • Er staat een (oude) verkoop- of demand-forecast op het artikel of op een hoger liggend eindproduct waarin dit artikel is opgenomen.  
+   • Controleer Menupad: Ordermanagement → Forecast → Overzicht Forecastregels.
+
+3. (On)gefiatteerde productie- of inkooporders  
+   • Niet-gefiatteerde of geannuleerde orders kunnen nog in de plannings-tabellen staan.  
+   • Kijk in Overzicht Planning → “Orders in bewerking” of “Unlinked demand”.
+
+4. Stuklijst (BOM) als sub-artikel  
+   • Het artikel kan als subcomponent in een andere stuklijst zitten waarvoor wél een order bestaat.  
+   • Gebruik de functie “Waar-Gebruikt” (Right-click → Where-Used) om te zien of het elders wordt aangeroepen.
+
+5. Datum/tijdhorizon MRP-run  
+   • Een te ruime horizon (bijv. 999 dagen) pikt ook demand op buiten de verwachte periode.  
+   • Controleer de instellingen in de MRP-wizard.
+
+6. Negatieve voorraadaanpassingen  
+   • Handmatige correcties of voorraadreserveringen kunnen de vrije voorraad < 0 zetten, wat behoefte triggert.
+
+Controle-stappen
+
+1. Artikel-/voorraadstatus
+   Ordermanagement → Voorraad → Artikelraadplegen  
+   Vul C-MILL Miditower-63136_C in → Tabblad Voorraad → knop ‘Voorraadverloop / Nettobeh.’  
+   • Kijk naar de eerste regel waar de voorraad < 0 of < Veiligheidsvoorraad komt te staan.  
+   • Noteer de bron (SO, Forecast, Min/Max).
+
+2. Veiligheidsvoorraad controleren
+   Artikelkaart → Tabblad Planning  
+   • Veiligheidsvoorraad: …  
+   • Minimale voorraad: …
+
+3. Forecasts
+   Ordermanagement → Forecast → Overzicht Forecastregels  
+   • Filter op artikelcode en periode.  
+   • Verwijder of sluit verouderde forecastregels.
+
+4. “Waar Gebruikt” over het item draaien  
+   • Controleer of het artikel als subcomponent voorkomt in BOM’s met open demand.
+
+5. Open orders / planningsresidu’s
+   Ordermanagement → Productie → Overzicht productieorders  
+   • Zet filter “Status ≠ Afgehandeld” en zoek op artikel.
+
+   Ordermanagement → Inkoop → Inkopen in Behandeling  
+   • Idem.
+
+6. Herbereken MRP na opschoning  
+   • Ordermanagement → Productie → MRP-run uitvoeren met ‘Alleen demands opnieuw berekenen’.  
+   • Verifieer of de behoefte verdwijnt.
+
+Mocht je na deze controles nog steeds onterechte behoefte zien, stuur dan aub:
+
+• Screenshot van het scherm ‘Voorraadverloop / Nettobeh.’ (met kolommen Datum, Bron, Aantal).  
+• Printscreen of export van de forecast- / productieorder- / inkooporderoverzichten waarop het artikel voorkomt.  
+• Instellingen/velden uit de artikelkaart (tabbladen Voorraad en Planning).
+
+Dan kan ik gericht meekijken in de onderliggende dataset of er sprake is van een data-inconsistentie.
+
+Ik hoor graag je bevindingen!","Dank voor de toelichting. Ik begrijp dat bij het maken van een productievoorstel er een samenstelling voor C-MILL Miditower-63136_C wordt voorgesteld, terwijl er geen open orders voor dit artikel zijn. Dat duidt er meestal op dat er onafhankelijke vraag of een planningparameter (zoals veiligheidsvoorraad) de behoefte triggert.
+
+Om dit gericht op te lossen heb ik twee dingen nodig:
+- In welk systeem en welke versie werk je precies (bijv. Exact Globe/Online, Dynamics 365 BC/FO, Ridder iQ, AFAS, …)?
+- Locatie/magazijn waarin je het voorstel ziet en een screenshot of export van de “vraag/aanbod” of “net requirements/pegging” voor artikel C-MILL Miditower-63136_C.
+
+Waarschijnlijke oorzaken (ook als er geen open verkoop- of productieorder staat):
+- Veiligheidsvoorraad / minimumvoorraad of herbestelpunt staat ingesteld en de beschikbare voorraad ligt daaronder.
+- Forecast/voorraadprognose is actief en wordt meegenomen in de MRP/MPS-run.
+- Het artikel is component in een open (of geplande) samenstelling/parent en wordt daardoor als afhankelijke vraag opgepakt.
+- Voorraad is (gedeeltelijk) gereserveerd, in kwaliteitsblokkade of op een andere locatie, waardoor de “beschikbare” voorraad negatief of lager is dan verwacht.
+- Intercompany-/magazijnverplaatsing (transfer) of project-/servicevraag veroorzaakt behoefte.
+- Assemblage-/samenstellingsbeleid staat op “naar voorraad” in plaats van “op order”, waardoor de MRP autonoom bouwt naar beleidsvoorraad.
+- Variant/locatie-specifieke parameters (de “_C” variant heeft eigen instellingen) veroorzaken vraag.
+
+Zo kun je achterhalen waar de vraag vandaan komt (generieke stappen, termen kunnen per pakket iets verschillen):
+1) Open de artikelkaart van C-MILL Miditower-63136_C op de betreffende locatie/magazijn.
+2) Bekijk “Beschikbaarheid per gebeurtenis” / “Netto behoeften” / “Vraag/aanbod” en klik door naar de pegging/bron van de behoefte op de datum van het productievoorstel. Noteer het type vraag (forecast, veiligheidsvoorraad, verkooporder, transfer, parent- productieorder, project, service, …).
+3) Controleer planningsparameters op het artikel:
+   - Veiligheidsvoorraad / minimum- en maximumvoorraad / herbestelpunt
+   - Lotgrootte en afronding (kan een voorstel geven ook bij kleine tekorten)
+   - MTO/MTS-instelling of Assemblage-/Samenstellingsbeleid (op order vs naar voorraad)
+   - Dekkingsgroep/leveringsbeleid en tijdvensters (time fences)
+4) Controleer of het artikel als component voorkomt in een actieve of geplande samenstelling/parent en of die order op dezelfde locatie gepland staat.
+5) Controleer forecasts: zijn er prognoseregels voor dit artikel of voor een parent die door MRP worden meegenomen? Eventueel een MRP-run testen zonder forecasts om te verifiëren.
+6) Controleer reserveringen en blokkades:
+   - Gereserveerde hoeveelheden
+   - Kwaliteits-/quarantaine- of geblokkeerde voorraad
+   - Negatieve voorraad (indien toegestaan)
+7) Controleer intercompany/transfer/project/service:
+   - Open transferorders naar/van de locatie
+   - Open project-/serviceorders met verbruik gepland
+8) Herhaal de MRP/MPS-run met dezelfde parameters en bekijk het voorstel opnieuw; controleer het peggingdetail van het specifieke voorstel (dat toont de exacte bron).
+
+Graag ontvangen voor vervolgstap:
+- Screenshot/export van de vraag/aanbod (net requirements/pegging) voor C-MILL Miditower-63136_C op de betreffende locatie.
+- Artikelinstellingen: veiligheidsvoorraad/min-max/herbestelpunt, assemblage-/samenstellingsbeleid, dekkingsgroep/leveringsbeleid, lotgrootte/afronding.
+- Beschikbare/gereserveerde/gebokkeerde voorraad per locatie.
+- Of er forecasts actief zijn en of “Forecast meenemen” aan staat in de MRP-run.
+- Of C-MILL Miditower-63136_C als component in een parent-order voorkomt.
+- Exacte pakket/versie en MRP-run instellingen (horizon, include forecasts, per locatie).
+
+Waarschijnlijke quick fixes zodra de bron bekend is:
+- Als veiligheidsvoorraad het triggert: pas veiligheidsvoorraad/herbestelpunt aan of bevestig dat bouwen naar voorraad gewenst is.
+- Als forecast: corrigeer/archiveren van forecastregels of MRP-run zonder forecast.
+- Als assemblagebeleid: zet samenstelling op “op order” i.p.v. “naar voorraad”.
+- Als reservering/blokkade: maak reserveringen vrij of deblokkeer voorraad waar mogelijk.
+- Als parent-vraag: valideer of die order terecht is en plan componentaanvraag via die parent.
+
+Stuur je bovenstaande informatie door, dan kan ik gericht aangeven waarom dit productievoorstel ontstaat en welke instellingen je kunt aanpassen om het gewenste gedrag te krijgen.",GPT-o3,GPT-5,Optie B

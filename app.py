@@ -42,7 +42,7 @@ def incident_hrm(nummer):
 # ERP Vragen lezen
 def lees_vragen_erp():
     alle_rijen = []
-    with open("AB_ERP_app.csv", newline="", encoding="utf-8") as csvfile: # deze veranderen wanneer echt live
+    with open("AB_ERP_test.csv", newline="", encoding="utf-8") as csvfile: # deze veranderen wanneer echt live
         reader = csv.DictReader(csvfile)
         for rij in reader:
             alle_rijen.append(rij)
@@ -51,7 +51,7 @@ def lees_vragen_erp():
 # Hrm Vragen lezen
 def lees_vragen_hrm():
     alle_rijen = []
-    with open("AB_HRM_app.csv", newline="", encoding="utf-8") as csvfile: # deze veranderen wanneer echt live
+    with open("AB_HRM_test.csv", newline="", encoding="utf-8") as csvfile: # deze veranderen wanneer echt live
         reader = csv.DictReader(csvfile)
         for rij in reader:
             alle_rijen.append(rij)
@@ -62,14 +62,14 @@ def maak_random_vraag(vragen):
     geselecteerde = random.sample(vragen, 1)[0]
 
     if random.choice([True, False]):
-        geselecteerde["Optie1"] = geselecteerde["GPTo_antwoorden"]
-        geselecteerde["Optie2"] = geselecteerde["GPT5_antwoorden"]
+        geselecteerde["Optie1"] = geselecteerde["GPTo3_antwoorden"]
+        geselecteerde["Optie2"] = geselecteerde["GPT-5.1_low_antwoorden"]
         geselecteerde["Optie1_model"] = "GPT-o3"
-        geselecteerde["Optie2_model"] = "GPT-5"
+        geselecteerde["Optie2_model"] = "GPT-5.1"
     else:
-        geselecteerde["Optie1"] = geselecteerde["GPT5_antwoorden"]
-        geselecteerde["Optie2"] = geselecteerde["GPTo_antwoorden"]
-        geselecteerde["Optie1_model"] = "GPT-5"
+        geselecteerde["Optie1"] = geselecteerde["GPT-5.1_low_antwoorden"]
+        geselecteerde["Optie2"] = geselecteerde["GPTo3_antwoorden"]
+        geselecteerde["Optie1_model"] = "GPT-5.1"
         geselecteerde["Optie2_model"] = "GPT-o3"
     
     geselecteerde["Optie1_raw"] = geselecteerde["Optie1"]
@@ -94,8 +94,8 @@ def opslaan_erp(nummer):
     index = request.form.get("index")
     onderwerp = request.form.get("onderwerp")
     toelichting = request.form.get("toelichting")
-    optie1 = request.form.get("optie1")
-    optie2 = request.form.get("optie2")
+    #optie1 = request.form.get("optie1")
+    #optie2 = request.form.get("optie2")
     keuze = request.form.get("keuze")
     optie1_model = request.form.get("optie1_model")
     optie2_model = request.form.get("optie2_model")
@@ -106,13 +106,13 @@ def opslaan_erp(nummer):
     with open(csv_bestand, mode="a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         if not bestand_bestaat:
-            writer.writerow(["Index", "Incident", "Onderwerp", "Toelichting", "Optie 1", "Optie 2","Model 1", "Model 2", "Gekozen optie"])
-        writer.writerow([index, nummer, onderwerp, toelichting, optie1, optie2, optie1_model, optie2_model, keuze])
+            writer.writerow(["Index", "Model A", "Model B", "Gekozen optie","Incident", "Onderwerp", "Toelichting"])
+        writer.writerow([index, optie1_model, optie2_model, keuze, nummer, onderwerp, toelichting])
 
     try:
         nieuwe_vragen = [v for v in vragen_erp if v["Index"] != index]
         vragen_erp = nieuwe_vragen
-        with open("AB_ERP_app.csv", "w", newline="", encoding="utf-8") as csvfile: # ook wijzigen
+        with open("AB_ERP_test.csv", "w", newline="", encoding="utf-8") as csvfile: # ook wijzigen
                 fieldnames = vragen_erp[0].keys() if vragen_erp else []
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 if fieldnames:
@@ -134,8 +134,8 @@ def opslaan_hrm(nummer):
     index = request.form.get("index")
     onderwerp = request.form.get("onderwerp")
     toelichting = request.form.get("toelichting")
-    optie1 = request.form.get("optie1")
-    optie2 = request.form.get("optie2")
+    #optie1 = request.form.get("optie1")
+    ##optie2 = request.form.get("optie2")
     keuze = request.form.get("keuze")
     optie1_model = request.form.get("optie1_model")
     optie2_model = request.form.get("optie2_model")
@@ -146,13 +146,13 @@ def opslaan_hrm(nummer):
     with open(csv_bestand, mode="a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         if not bestand_bestaat:
-            writer.writerow(["Index", "Incident", "Onderwerp", "Toelichting", "Optie 1", "Optie 2","Model 1", "Model 2", "Gekozen optie"])
-        writer.writerow([index, nummer, onderwerp, toelichting, optie1, optie2, optie1_model, optie2_model, keuze])
+            writer.writerow(["Index", "Model A", "Model B", "Gekozen optie","Incident", "Onderwerp", "Toelichting"])
+        writer.writerow([index, optie1_model, optie2_model, keuze, nummer, onderwerp, toelichting])
 
     try:
         nieuwe_vragen = [v for v in vragen_hrm if v["Index"] != index]
         vragen_hrm = nieuwe_vragen
-        with open("AB_HRM_app.csv", "w", newline="", encoding="utf-8") as csvfile: # ook wijzigen
+        with open("AB_HRM_test.csv", "w", newline="", encoding="utf-8") as csvfile: # ook wijzigen
                 fieldnames = vragen_hrm[0].keys() if vragen_hrm else []
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 if fieldnames:

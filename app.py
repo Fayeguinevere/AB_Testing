@@ -42,7 +42,7 @@ def incident_hrm(nummer):
 # ERP Vragen lezen
 def lees_vragen_erp():
     alle_rijen = []
-    with open("AB_ERP_test.csv", newline="", encoding="utf-8") as csvfile: # deze veranderen wanneer echt live
+    with open("AB_ERP_ready.csv", newline="", encoding="utf-8") as csvfile: # deze veranderen wanneer echt live
         reader = csv.DictReader(csvfile)
         for rij in reader:
             alle_rijen.append(rij)
@@ -51,7 +51,7 @@ def lees_vragen_erp():
 # Hrm Vragen lezen
 def lees_vragen_hrm():
     alle_rijen = []
-    with open("AB_HRM_test.csv", newline="", encoding="utf-8") as csvfile: # deze veranderen wanneer echt live
+    with open("AB_HRM_ready.csv", newline="", encoding="utf-8") as csvfile: # deze veranderen wanneer echt live
         reader = csv.DictReader(csvfile)
         for rij in reader:
             alle_rijen.append(rij)
@@ -112,7 +112,7 @@ def opslaan_erp(nummer):
     try:
         nieuwe_vragen = [v for v in vragen_erp if v["Index"] != index]
         vragen_erp = nieuwe_vragen
-        with open("AB_ERP_test.csv", "w", newline="", encoding="utf-8") as csvfile: # ook wijzigen
+        with open("AB_ERP_ready.csv", "w", newline="", encoding="utf-8") as csvfile: # ook wijzigen
                 fieldnames = vragen_erp[0].keys() if vragen_erp else []
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 if fieldnames:
@@ -152,7 +152,7 @@ def opslaan_hrm(nummer):
     try:
         nieuwe_vragen = [v for v in vragen_hrm if v["Index"] != index]
         vragen_hrm = nieuwe_vragen
-        with open("AB_HRM_test.csv", "w", newline="", encoding="utf-8") as csvfile: # ook wijzigen
+        with open("AB_HRM_ready.csv", "w", newline="", encoding="utf-8") as csvfile: # ook wijzigen
                 fieldnames = vragen_hrm[0].keys() if vragen_hrm else []
                 writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
                 if fieldnames:

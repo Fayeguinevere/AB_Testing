@@ -42,6 +42,7 @@
       font-family: 'Roboto', sans-serif;
       display: flex;
       box-sizing: border-box;
+      gap: 20px;
     }
 
     .grijsvlakab {
@@ -144,25 +145,28 @@
       line-height: 1.6;
     }
 
-    .blauwe-streep {
-      position: absolute;
+    .oranje-streep {
       top: 0;
       bottom: 0;
       left: 50%;
       width: 2px;
       background-color: orange;
       transform: translateX(-50%);
+      align-self: stretch; 
     }
 
     .linkerkant,
     .rechterkant {
-      width: 45%;
+      width: 50%;
+      padding: 10px 20px;
+      box-sizing: border-box;
       text-align: left;
       font-size: 15px;
       font-weight: 400;
       color: #005FAA;
       line-height: 1.6;
       margin: 20px;
+      flex:1;
     }
 
     .rechterkant {

@@ -23,18 +23,18 @@
         </div>
         </div>
 
-  <div class="grijsvlak">
-    <div class="blauwe-streep"></div>
+<div class="grijsvlak"> 
+  <div class="linkerkant"> 
+    <strong>Optie A:</strong><br> 
+    <div class="optie-tekst">{{ vraag.Optie1_html|safe }}</div> 
+  </div>
 
-    <div class="linkerkant">
-      <strong>Optie A:</strong><br>
-      <div class="optie-tekst">{{ vraag.Optie1_html|safe }}</div>
-    </div>
+    <div class="oranje-streep"></div> 
 
-    <div class="rechterkant">
-      <strong>Optie B:</strong><br>
-      <div class="optie-tekst">{{ vraag.Optie2_html|safe }}</div>
-    </div>
+  <div class="rechterkant"> 
+    <strong>Optie B:</strong><br> 
+    <div class="optie-tekst">{{ vraag.Optie2_html|safe }}</div>
+   </div> 
   </div>
 
   <div class="tekst1">
@@ -51,8 +51,12 @@
       <button type="submit" name="keuze" value="Optie A" class="knop">Optie A</button>
       <button type="submit" name="keuze" value="Optie B" class="knop">Optie B</button>
     </form>
+      <a href="{{ url_for('incident_erp', nummer=nummer) }}" class="knop">Overslaan</a>
+
   </div>
   {% endfor %}
+
+
 
 
 

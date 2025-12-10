@@ -3614,9 +3614,9 @@ Zodra je deze info (en bij voorkeur een of twee concrete voorbeelden met screens
 - en zo nodig verder onderzoeken of dit een bug in de applicatie is."
 38,ERP,"[Projectboeking / Opbrengst] Projectboeking wordt alleen gemaakt voor kostenrekening, niet voor passiva rekening aan debetzijde, niet voor de omzetrekening aan creditzijde.","Probleembeschrijving: Bij het boekingen van de vrijval van projecten wordt enkel het projectnummer geboekt aan de debetzijde, maar niet aan de creditzijde. In de bijlage heb ik de boekingsinstructie opgenomen en een voorbeeld van een importbestand voor de testomgeving. Aanvullende details: - Kun je precies aangeven welke stappen je volgt bij het boeken van de vrijval van projecten? - zie instructie - Kun je aangeven welke resultaten je verwacht bij het boeken van de vrijval van projecten? - Het project ook geboekt wordt aan de creditzijde en niet enkel aan de debetzijde. - Kun je bevestigen of het probleem zich bij meerdere projecten voordoet? - Ja","Hieronder vind je de gevraagde informatie plus een paar extra observaties die we tijdens het testen hebben gedaan.
 
-1. Welke stappen volgen wij? 
-   a. Financieel > Dagboeken > Algemeen dagboek, batch “Project Vrijval”.   
-   b. Actie “Importeer uit Excel” en bestand ‘VrijvalProjecten_Test_20240605.xlsx’ selecteren (zie bijlage).   
+1. Welke stappen volgen wij?
+   a. Financieel > Dagboeken > Algemeen dagboek, batch “Project Vrijval”.  
+   b. Actie “Importeer uit Excel” en bestand ‘VrijvalProjecten_Test_20240605.xlsx’ selecteren (zie bijlage).  
    c. Bestand bevat o.a. de kolommen:  
       - Boekingdatum  
       - Documentnr.  
@@ -3626,18 +3626,18 @@ Zodra je deze info (en bij voorkeur een of twee concrete voorbeelden met screens
       - Bedrag  
    d. Na validatie (“Voorboeken”) posten we het dagboek.
 
-2. Wat is het werkelijke resultaat? 
-   - Grootboekposten voorbeeld:   
-     DR 1450 Kostenproject           10.000  (Project = P0123)   
-     CR 2985 Te specificeren omzet   10.000  (Project = —)   
+2. Wat is het werkelijke resultaat?
+   - Grootboekposten voorbeeld:  
+     DR 1450 Kostenproject           10.000  (Project = P0123)  
+     CR 2985 Te specificeren omzet   10.000  (Project = —)  
    - Het project wordt dus alleen op de debetregel (kosten) overgenomen; de creditregel (passiva of omzet) blijft leeg.  
 
-3. Wat verwachten we? 
-   - Zowel debet- als creditpost moeten dezelfde projectcode krijgen, zodat we rapportages kunnen draaien op projectniveau:   
-     DR 1450 Kostenproject           10.000  (Project = P0123)   
+3. Wat verwachten we?
+   - Zowel debet- als creditpost moeten dezelfde projectcode krijgen, zodat we rapportages kunnen draaien op projectniveau:  
+     DR 1450 Kostenproject           10.000  (Project = P0123)  
      CR 2985 Te specificeren omzet   10.000  (Project = P0123)
 
-4. Komt het bij meer projecten voor? 
+4. Komt het bij meer projecten voor?
    - Ja. Getest met P0123, P0456, P0789 en nog 5 andere projecten; telkens zelfde resultaat.  
    - Geldt zowel voor import via Excel als voor handmatig ingevoerde dagboekregels.
 
@@ -17339,7 +17339,7 @@ Laat me even weten:
 183,ERP,"Aanpassen van periodetabel van ""4 weken Financieel"" naar ""Maand Financieel"" niet mogelijk.","Probleembeschrijving: In de omgeving 97729AA administratie Green Teams Europe Group B.V. is door de inrichter onder de instellingen van de administratie - Balans - Periodetabel financieel ""4 weken Financieel"" geselecteerd. Dit moet de periodetabel Maand financieel zijn. Is dit op enig manier aan te passen? Aanvullende details: - Kun je bevestigen of er al transacties zijn geboekt in de administratie met de huidige periodetabel? - Er zijn al mutaties geweest - Heb je geprobeerd om via 'Instellingen' > 'Administratie-instellingen' dit aan te passen, en wat gebeurde er toen precies? - Staat als niet aan te passen - Is het mogelijk dat we toegang krijgen tot een schermafbeelding van waar deze instelling zichtbaar is (indien niet inbegrepen)? - Is toegevoegd","Beste …,
 
 Kort samengevat  
-Het wijzigen van de   periodetabel “4-weken financieel” naar “Maand financieel” is in een bestaande administratie niet meer toegestaan zodra er (definitieve óf concept) boekingen in die administratie staan. Dit is een veiligheidsmaatregel: de gekozen periodetabel is bepalend voor de opbouw van de boekjaren, de periodenummers, het btw-aangifte-schema en allerlei koppelingen met reeds gemaakte journaalposten. Een overgang naar een andere tabel – met een ander aantal en een andere lengte van periodes – zou de interne consistentie van de administratie beschadigen.
+Het wijzigen van de  periodetabel “4-weken financieel” naar “Maand financieel” is in een bestaande administratie niet meer toegestaan zodra er (definitieve óf concept) boekingen in die administratie staan. Dit is een veiligheidsmaatregel: de gekozen periodetabel is bepalend voor de opbouw van de boekjaren, de periodenummers, het btw-aangifte-schema en allerlei koppelingen met reeds gemaakte journaalposten. Een overgang naar een andere tabel – met een ander aantal en een andere lengte van periodes – zou de interne consistentie van de administratie beschadigen.
 
 Waarom het niet werkt  
 1. Een 4-weken­tabel telt 13 periodes, een maand­tabel 12.  
@@ -24741,7 +24741,7 @@ Kort antwoord op je vragen:
 Als je wilt, kun je de huidige toelichting (die Wagenpark ziet) hier even plakken of een screenshot beschrijven; dan kan ik gerichter aangeven in welk veld je exact moet zijn."
 263,ERP,"[blokkade] Btw/icp-aangifte opent niet in administratie, meerdere gebruikers ervaren dit.","Probleembeschrijving: In 1 administratie (Rodenburg Bouwkundige Brandpreventie B.V.) kunnen we de Btw/icp-aangifte niet openen, dus vanuit Financieel naar Btw/icp-aangifte, maar dan opent er geen volgend scherm. Aanvullende details: - Kun je aangeven of dit probleem zich voordoet bij meerdere gebruikers binnen de administratie? - Meerdere gebruikers hebben hier last van - Heb je al geprobeerd om de browsercache te legen of een andere browser te gebruiken? - Nee, lijkt me ook niet logisch. Dit gebeurt in Profit - Is er recent iets gewijzigd in de instellingen van deze administratie of in het systeem? - Nee, alleen zijn we op de achtergrond bezig om deze administratie uit de Rodenburg Groep te halen. Robin van Dosselaar is hiervoor bezig","Beste Robin,
 
-Dank voor de heldere beschrijving.   Ik heb het in elk geval zo begrepen:
+Dank voor de heldere beschrijving.  Ik heb het in elk geval zo begrepen:
 
 • Alleen in administratie “Rodenburg Bouwkundige Brandpreventie B.V.” reageert de tegel/menukeuze Financieel ➜ Btw/ICP-aangifte niet meer.  
 • Het betreft alle (geteste) gebruikers.  

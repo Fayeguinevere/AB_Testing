@@ -23,7 +23,7 @@ def bedankt():
 @app.route("/incident_erp/<int:nummer>")
 def incident_erp(nummer):
     global vragen_erp
-    if not vragen_erp:           # Probleem zit hier
+    if not vragen_erp:
         vragen_erp = lees_vragen_erp()
     geselecteerde = maak_random_vraag(vragen_erp)
     return render_template("incident_erp.html", vragen=[geselecteerde], nummer=nummer)
@@ -32,33 +32,35 @@ def incident_erp(nummer):
 @app.route("/incident_hrm/<int:nummer>")
 def incident_hrm(nummer):
     global vragen_hrm
-    if not vragen_hrm:           # Probleem zit hier
+    if not vragen_hrm:
         vragen_hrm = lees_vragen_hrm()
     geselecteerde = maak_random_vraag(vragen_hrm)
     return render_template("incident_hrm.html", vragen=[geselecteerde], nummer=nummer)
 
-# ERP Vragen lezen
+# ERP vragen lezen
 def lees_vragen_erp():
     alle_rijen = []
-    with open("AB_ERP_ready.csv", newline="", encoding="utf-8") as csvfile: # deze veranderen wanneer echt live
+    with open("AB_ERP_ready.csv", newline="", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
         for rij in reader:
             alle_rijen.append(rij)
     return alle_rijen
 
-# Hrm Vragen lezen
+# HRM vragen lezen
 def lees_vragen_hrm():
     alle_rijen = []
-    with open("AB_HRM_ready.csv", newline="", encoding="utf-8") as csvfile: # deze veranderen wanneer echt live
+    with open("AB_HRM_ready.csv", newline="", encoding="utf-8") as csvfile:
         reader = csv.DictReader(csvfile)
         for rij in reader:
             alle_rijen.append(rij)
     return alle_rijen
 
-# Random positie
+# Random positie — FIXED: maakt nu een kopie
 def maak_random_vraag(vragen):
-    geselecteerde = random.sample(vragen, 1)[0]
+    origineel = random.choice(vragen)            # originele rij
+    geselecteerde = origineel.copy()             # <<< FIX: kopie zodat CSV-structuur intact blijft
 
+    # Random volgorde
     if random.choice([True, False]):
         geselecteerde["Optie1"] = geselecteerde["GPTo3_antwoorden"]
         geselecteerde["Optie2"] = geselecteerde["GPT-5.1_low_antwoorden"]
@@ -69,71 +71,63 @@ def maak_random_vraag(vragen):
         geselecteerde["Optie2"] = geselecteerde["GPTo3_antwoorden"]
         geselecteerde["Optie1_model"] = "GPT-5.1"
         geselecteerde["Optie2_model"] = "GPT-o3"
-    
+
+    # HTML formatting
     geselecteerde["Optie1_raw"] = geselecteerde["Optie1"]
-    optie1_clean = geselecteerde["Optie1"].replace(":", ":\n    ")
-    optie1_clean = optie1_clean.replace("\n", "  \n")
-    geselecteerde["Optie1_html"] = Markup(markdown.markdown(optie1_clean))
+    o1 = geselecteerde["Optie1"].replace(":", ":\n    ").replace("\n", "  \n")
+    geselecteerde["Optie1_html"] = Markup(markdown.markdown(o1))
 
     geselecteerde["Optie2_raw"] = geselecteerde["Optie2"]
-    optie2_clean = geselecteerde["Optie2"].replace(":", ":\n    ")
-    optie2_clean = optie2_clean.replace("\n", "  \n")
-    geselecteerde["Optie2_html"] = Markup(markdown.markdown(optie2_clean))
-
-    #geselecteerde["Optie1"] = Markup(markdown.markdown(geselecteerde["Optie1"]))
-    #geselecteerde["Optie2"] = Markup(markdown.markdown(geselecteerde["Optie2"]))
+    o2 = geselecteerde["Optie2"].replace(":", ":\n    ").replace("\n", "  \n")
+    geselecteerde["Optie2_html"] = Markup(markdown.markdown(o2))
 
     return geselecteerde
 
-# Resultaat ERP opslaan
+# Resultaat ERP opslaan — FIXED CSV rewrite
 @app.route("/opslaan_erp/<int:nummer>", methods=["POST"])
 def opslaan_erp(nummer):
     global vragen_erp
-    index = request.form.get("index")
+
+    index = (request.form.get("index"))
     onderwerp = request.form.get("onderwerp")
     toelichting = request.form.get("toelichting")
-    #optie1 = request.form.get("optie1")
-    #optie2 = request.form.get("optie2")
     keuze = request.form.get("keuze")
     optie1_model = request.form.get("optie1_model")
     optie2_model = request.form.get("optie2_model")
 
+    # Resultaten opslaan
     csv_bestand = "resultaten_erp.csv"
     bestand_bestaat = os.path.exists(csv_bestand)
 
-    with open(csv_bestand, mode="a", newline="", encoding="utf-8") as f:
+    with open(csv_bestand, "a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         if not bestand_bestaat:
-            writer.writerow(["Index", "Model A", "Model B", "Gekozen optie","Incident", "Onderwerp", "Toelichting"])
+            writer.writerow(["Index", "Model A", "Model B", "Gekozen optie", "Incident", "Onderwerp", "Toelichting"])
         writer.writerow([index, optie1_model, optie2_model, keuze, nummer, onderwerp, toelichting])
 
-    try:
-        nieuwe_vragen = [v for v in vragen_erp if v["Index"] != index]
-        vragen_erp = nieuwe_vragen
-        with open("AB_ERP_ready.csv", "w", newline="", encoding="utf-8") as csvfile: # ook wijzigen
-                fieldnames = vragen_erp[0].keys() if vragen_erp else []
-                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                if fieldnames:
-                    writer.writeheader()
-                    writer.writerows(vragen_erp)
-    except Exception as e:
-        print(f"Fout bij verwijderen van vraag {index}: {e}")
+    # VERWIJDER de beantwoorde vraag
+    vragen_erp = [v for v in vragen_erp if (v["Index"]) != index]
 
+    # SCHRIJF CSV OPNIEUW — FIXED: altijd consistente header
+    with open("AB_ERP_ready.csv", "w", newline="", encoding="utf-8") as csvfile:
+        if vragen_erp:
+            fieldnames = list(vragen_erp[0].keys())
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(vragen_erp)
+
+    # Volgende vraag
     volgend_incident = nummer + 1
-    if volgend_incident <= 20:
-        return redirect(url_for("incident_erp", nummer=volgend_incident))
-    else:
-        return redirect(url_for("bedankt"))
+    return redirect(url_for("incident_erp", nummer=volgend_incident)) if volgend_incident <= 30 else redirect(url_for("bedankt"))
 
-# Resultaat opslaan HRM
+# Resultaat HRM opslaan — FIXED int comparison + CSV rewrite
 @app.route("/opslaan_hrm/<int:nummer>", methods=["POST"])
 def opslaan_hrm(nummer):
     global vragen_hrm
-    index = request.form.get("index")
+
+    index = int(request.form.get("index"))
     onderwerp = request.form.get("onderwerp")
     toelichting = request.form.get("toelichting")
-    #optie1 = request.form.get("optie1")
-    ##optie2 = request.form.get("optie2")
     keuze = request.form.get("keuze")
     optie1_model = request.form.get("optie1_model")
     optie2_model = request.form.get("optie2_model")
@@ -141,30 +135,25 @@ def opslaan_hrm(nummer):
     csv_bestand = "resultaten_hrm.csv"
     bestand_bestaat = os.path.exists(csv_bestand)
 
-    with open(csv_bestand, mode="a", newline="", encoding="utf-8") as f:
+    with open(csv_bestand, "a", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         if not bestand_bestaat:
-            writer.writerow(["Index", "Model A", "Model B", "Gekozen optie","Incident", "Onderwerp", "Toelichting"])
+            writer.writerow(["Index", "Model A", "Model B", "Gekozen optie", "Incident", "Onderwerp", "Toelichting"])
         writer.writerow([index, optie1_model, optie2_model, keuze, nummer, onderwerp, toelichting])
 
-    try:
-        nieuwe_vragen = [v for v in vragen_hrm if v["Index"] != index]
-        vragen_hrm = nieuwe_vragen
-        with open("AB_HRM_ready.csv", "w", newline="", encoding="utf-8") as csvfile: # ook wijzigen
-                fieldnames = vragen_hrm[0].keys() if vragen_hrm else []
-                writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-                if fieldnames:
-                    writer.writeheader()
-                    writer.writerows(vragen_hrm)
-    except Exception as e:
-        print(f"Fout bij verwijderen van vraag {index}: {e}")
+    # VERWIJDER de beantwoorde vraag — FIXED type
+    vragen_hrm = [v for v in vragen_hrm if int(v["Index"]) != index]
+
+    # CSV opnieuw schrijven — FIXED
+    with open("AB_HRM_ready.csv", "w", newline="", encoding="utf-8") as csvfile:
+        if vragen_hrm:
+            fieldnames = list(vragen_hrm[0].keys())
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(vragen_hrm)
 
     volgend_incident = nummer + 1
-    if volgend_incident <= 20:
-        return redirect(url_for("incident_hrm", nummer=volgend_incident))
-    else:
-        return redirect(url_for("bedankt"))
-
+    return redirect(url_for("incident_hrm", nummer=volgend_incident)) if volgend_incident <= 30 else redirect(url_for("bedankt"))
 
 
 if __name__ == "__main__":

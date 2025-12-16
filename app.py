@@ -41,6 +41,9 @@ CONFIG = {
 # Initialize database manager
 db = DatabaseManager(CONFIG)
 
+# Initialize database on app startup (works with both Flask dev server and gunicorn)
+db.init_database()
+
 # Admin authentication decorator
 def admin_required(f):
     @wraps(f)
@@ -228,5 +231,4 @@ def opslaan_hrm(nummer):
 
 
 if __name__ == "__main__":
-    db.init_database()
     app.run(debug=True)

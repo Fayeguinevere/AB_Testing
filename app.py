@@ -13,7 +13,7 @@ app.secret_key = os.environ.get("SECRET_KEY", "dev-secret-key-change-in-producti
 
 # Configuration
 CONFIG = {
-    "database": "ab_testing.db",
+    "database": os.path.join(os.getenv("DATA_DIR", "."), "ab_testing.db"),
     "admin_key": os.environ.get("ADMIN_KEY", "djh2udc3hug_JND-vxv"),  # Change this!
     "max_incidents": 30,
     "models": {

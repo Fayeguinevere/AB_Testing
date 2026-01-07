@@ -20,17 +20,17 @@ CONFIG = {
         "model_a": "GPT-o3",
         "model_b": "GPT-5.1",
         "column_a": "GPTo3_antwoorden",
-        "column_b": "GPT-5.1_low_antwoorden"
+        "column_b": "GPT-5.1_antwoorden"
     },
     "erp": {
-        "csv_ready": "AB_ERP_ready.csv",
+        "csv_ready": "New_AB_ERP.csv",
         "table_questions": "questions_erp",
         "table_results": "results_erp",
         "template": "incident_erp.html",
         "route": "incident_erp"
     },
     "hrm": {
-        "csv_ready": "AB_HRM_ready.csv",
+        "csv_ready": "New_AB_HRM.csv",
         "table_questions": "questions_hrm",
         "table_results": "results_hrm",
         "template": "incident_hrm.html",

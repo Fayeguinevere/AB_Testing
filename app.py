@@ -20,7 +20,7 @@ CONFIG = {
         "model_a": "GPT-o3",
         "model_b": "GPT-5.1",
         "column_a": "GPTo3_antwoorden",
-        "column_b": "GPT-5.1_antwoorden"
+        "column_b": "GPT-5.1_low_antwoorden"
     },
     "erp": {
         "csv_ready": "New_AB_ERP.csv",
@@ -153,7 +153,7 @@ def reset_database(incident_type):
 # Generic incident pagina
 def toon_incident(incident_type, nummer):
     vraag = db.get_random_question(incident_type)
-    
+
     if not vraag:
         # No more questions available
         return redirect(url_for("bedankt"))

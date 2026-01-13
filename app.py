@@ -35,6 +35,13 @@ CONFIG = {
         "table_results": "results_hrm",
         "template": "incident_hrm.html",
         "route": "incident_hrm"
+    },
+    "sb": {
+    "csv_ready": "New_SB.csv",
+    "table_questions": "questions_sb",
+    "table_results": "results_sb",
+    "template": "incident_sb.html",
+    "route": "incident_sb"
     }
 }
 
@@ -88,6 +95,8 @@ def admin_dashboard():
     # Get results
     erp_results = db.get_all_results("erp")
     hrm_results = db.get_all_results("hrm")
+    sb_results = db.get_all_results("sb")
+
     
     # Get statistics
     stats = db.get_statistics()
@@ -95,16 +104,19 @@ def admin_dashboard():
     return render_template("admin_dashboard.html", 
                          erp_results=erp_results,
                          hrm_results=hrm_results,
+                         sb_results=sb_results,
                          erp_count=stats["erp_count"],
                          hrm_count=stats["hrm_count"],
+                         sb_count=stats["sb_count"],
                          erp_remaining=stats["erp_remaining"],
-                         hrm_remaining=stats["hrm_remaining"])
+                         hrm_remaining=stats["hrm_remaining"],
+                         sb_remaining=stats["sb_remaining"])
 
 # Export results as CSV
 @app.route("/admin/export/<incident_type>")
 @admin_required
 def export_results(incident_type):
-    if incident_type not in ["erp", "hrm"]:
+    if incident_type not in ["erp", "hrm", "sb"]:
         return "Invalid type", 400
     
     results = db.get_all_results(incident_type)
@@ -143,7 +155,7 @@ def export_results(incident_type):
 @app.route("/admin/reset/<incident_type>", methods=["POST"])
 @admin_required
 def reset_database(incident_type):
-    if incident_type not in ["erp", "hrm", "all"]:
+    if incident_type not in ["erp", "hrm", "sb", "all"]:
         return "Invalid type", 400
     
     db.reset_database(incident_type)
@@ -170,6 +182,11 @@ def incident_erp(nummer):
 @app.route("/incident_hrm/<int:nummer>")
 def incident_hrm(nummer):
     return toon_incident("hrm", nummer)
+
+# Incident SB pagina
+@app.route("/incident_sb/<int:nummer>")
+def incident_sb(nummer):
+    return toon_incident("sb", nummer)
 
 
 # Random positie
@@ -228,6 +245,11 @@ def opslaan_erp(nummer):
 @app.route("/opslaan_hrm/<int:nummer>", methods=["POST"])
 def opslaan_hrm(nummer):
     return opslaan_resultaat("hrm", nummer)
+
+# Resultaat SB opslaan
+@app.route("/opslaan_sb/<int:nummer>", methods=["POST"])
+def opslaan_sb(nummer):
+    return opslaan_resultaat("sb", nummer)
 
 
 if __name__ == "__main__":

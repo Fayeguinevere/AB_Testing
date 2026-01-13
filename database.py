@@ -32,7 +32,7 @@ class DatabaseManager:
             cursor = conn.cursor()
             
             # Create tables for both ERP and HRM
-            for incident_type in ["erp", "hrm"]:
+            for incident_type in ["erp", "hrm", "sb"]:
                 # Questions table
                 cursor.execute(f'''
                     CREATE TABLE IF NOT EXISTS {self.config[incident_type]["table_questions"]} (
@@ -132,7 +132,7 @@ class DatabaseManager:
             cursor = conn.cursor()
             
             stats = {}
-            for incident_type in ["erp", "hrm"]:
+            for incident_type in ["erp", "hrm", "sb"]:
                 cursor.execute(f'SELECT COUNT(*) FROM {self.config[incident_type]["table_results"]}')
                 stats[f"{incident_type}_count"] = cursor.fetchone()[0]
                 
@@ -143,7 +143,7 @@ class DatabaseManager:
     
     def reset_database(self, incident_type):
         """Reset database for specific incident type or all"""
-        types_to_reset = ["erp", "hrm"] if incident_type == "all" else [incident_type]
+        types_to_reset = ["erp", "hrm", "sb"] if incident_type == "all" else [incident_type]
         
         with self.get_connection() as conn:
             cursor = conn.cursor()

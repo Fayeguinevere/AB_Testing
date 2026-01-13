@@ -161,12 +161,20 @@
                 <div class="number">{{ hrm_count }}</div>
             </div>
             <div class="stat-card">
+                <h3>SB Antwoorden</h3>
+                <div class="number">{{ sb_count }}</div>
+            </div>
+            <div class="stat-card">
                 <h3>ERP Vragen Over</h3>
                 <div class="number">{{ erp_remaining }}</div>
             </div>
             <div class="stat-card">
                 <h3>HRM Vragen Over</h3>
                 <div class="number">{{ hrm_remaining }}</div>
+            </div>
+            <div class="stat-card">
+                <h3>SB Vragen Over</h3>
+                <div class="number">{{ sb_remaining }}</div>
             </div>
         </div>
 
@@ -178,6 +186,9 @@
             </form>
             <form method="POST" action="{{ url_for('reset_database', incident_type='hrm') }}" style="display: inline; margin-left: 10px;" onsubmit="return confirm('Weet je zeker dat je HRM wilt resetten?');">
                 <button type="submit" class="btn btn-danger">Reset HRM</button>
+            </form>
+                <form method="POST" action="{{ url_for('reset_database', incident_type='sb') }}" style="display: inline; margin-left: 10px;" onsubmit="return confirm('Weet je zeker dat je SB wilt resetten?');">
+                    <button type="submit" class="btn btn-danger">Reset SB</button>
             </form>
             <form method="POST" action="{{ url_for('reset_database', incident_type='all') }}" style="display: inline; margin-left: 10px;" onsubmit="return confirm('Weet je zeker dat je ALLES wilt resetten?');">
                 <button type="submit" class="btn btn-danger">Reset ALLES</button>
@@ -247,6 +258,47 @@
                 </thead>
                 <tbody>
                     {% for result in hrm_results %}
+                    <tr>
+                        <td>{{ result.id }}</td>
+                        <td>{{ result.question_index }}</td>
+                        <td>{{ result.model_a }}</td>
+                        <td>{{ result.model_b }}</td>
+                        <td><span class="choice">{{ result.gekozen_optie }}</span></td>
+                        <td>{{ result.incident_nummer }}</td>
+                        <td>{{ result.onderwerp or '-' }}</td>
+                        <td class="toelichting" title="{{ result.toelichting or '-' }}">{{ result.toelichting or '-' }}</td>
+                        <td class="timestamp">{{ result.timestamp }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% else %}
+            <p>Geen resultaten beschikbaar.</p>
+            {% endif %}
+        </div>
+    </div>
+        <div class="section">
+            <h2>
+                <span>SB Resultaten ({{ sb_count }})</span>
+                <a href="{{ url_for('export_results', incident_type='sb') }}" class="btn btn-export">📥 Export CSV</a>
+            </h2>
+            {% if sb_results %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Vraag Index</th>
+                        <th>Model A</th>
+                        <th>Model B</th>
+                        <th>Gekozen</th>
+                        <th>Incident #</th>
+                        <th>Onderwerp</th>
+                        <th>Toelichting</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for result in sb_results %}
                     <tr>
                         <td>{{ result.id }}</td>
                         <td>{{ result.question_index }}</td>
